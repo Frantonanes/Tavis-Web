@@ -1,0 +1,427 @@
+.theme-selection {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: grid;
+  place-items: center;
+
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 2rem;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  color: #f4f7fa;
+
+  background:
+    radial-gradient(
+      circle at 75% 20%,
+      rgba(39, 200, 232, 0.12),
+      transparent 30%
+    ),
+    linear-gradient(
+      rgba(39, 200, 232, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(39, 200, 232, 0.035) 1px,
+      transparent 1px
+    ),
+    #070810;
+
+  background-size:
+    auto,
+    48px 48px,
+    48px 48px,
+    auto;
+}
+
+.theme-selection__content {
+  width: min(100%, 960px);
+  margin: auto;
+
+  text-align: center;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.theme-selection__brand {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 2rem;
+}
+
+.theme-selection__brand img {
+  display: block;
+
+  width: clamp(145px, 18vw, 220px);
+  height: auto;
+
+  object-fit: contain;
+
+  filter: drop-shadow(
+    0 0 16px rgba(39, 200, 232, 0.16)
+  );
+}
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.theme-selection__eyebrow {
+  display: inline-flex;
+
+  margin-bottom: 1.2rem;
+  padding: 0.5rem 0.9rem;
+
+  color: #27c8e8;
+  background: rgba(39, 200, 232, 0.07);
+
+  border: 1px solid rgba(39, 200, 232, 0.2);
+  border-radius: 999px;
+
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.theme-selection h1 {
+  max-width: 720px;
+  margin: 0 auto 1rem;
+
+  color: #ffffff;
+
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.02;
+  letter-spacing: -0.055em;
+}
+
+.theme-selection__content > p {
+  margin: 0 0 2.6rem;
+
+  color: rgba(220, 229, 238, 0.62);
+
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+/* =========================
+   OPCIONES
+========================= */
+
+.theme-selection__options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.theme-option {
+  position: relative;
+  appearance: none;
+  cursor: pointer;
+  font: inherit;
+  display: grid;
+  grid-template-columns: 150px 1fr auto;
+  align-items: center;
+  gap: 1.2rem;
+
+  min-width: 0;
+  padding: 1rem;
+
+  border-radius: 22px;
+
+  text-align: left;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.theme-option:hover {
+  transform: translateY(-6px);
+}
+
+/* =========================
+   OPCIÓN CLARA
+========================= */
+
+.theme-option--light {
+  color: #073b4c;
+  background: #f4f1eb;
+
+  border: 1px solid rgba(255, 255, 255, 0.75);
+
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24);
+}
+
+.theme-option--light:hover {
+  border-color: rgba(181, 154, 106, 0.7);
+
+  box-shadow:
+    0 28px 65px rgba(0, 0, 0, 0.28),
+    0 0 24px rgba(181, 154, 106, 0.12);
+}
+
+/* =========================
+   OPCIÓN OSCURA
+========================= */
+
+.theme-option--dark {
+  color: #ffffff;
+  background: rgba(14, 20, 31, 0.88);
+
+  border: 1px solid rgba(39, 200, 232, 0.2);
+
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.theme-option--dark:hover {
+  border-color: rgba(39, 200, 232, 0.6);
+
+  box-shadow:
+    0 28px 70px rgba(0, 0, 0, 0.38),
+    0 0 28px rgba(39, 200, 232, 0.12);
+}
+
+/* =========================
+   VISTA PREVIA
+========================= */
+
+.theme-option__preview {
+  display: flex;
+  align-items: center;
+
+  min-height: 105px;
+  padding: 0.8rem;
+
+  border-radius: 15px;
+}
+
+.theme-option--light .theme-option__preview {
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(24, 187, 209, 0.15),
+      transparent 40%
+    ),
+    #fafaf8;
+}
+
+.theme-option--dark .theme-option__preview {
+  background:
+    linear-gradient(
+      rgba(39, 200, 232, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(39, 200, 232, 0.05) 1px,
+      transparent 1px
+    ),
+    #080c14;
+
+  background-size: 18px 18px;
+}
+
+/* =========================
+   MINI NAVEGADOR
+========================= */
+
+.theme-option__browser {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.45rem;
+
+  width: 100%;
+  padding: 0.75rem;
+
+  border-radius: 10px;
+}
+
+.theme-option--light .theme-option__browser {
+  background: #ffffff;
+  border: 1px solid rgba(7, 59, 76, 0.1);
+}
+
+.theme-option--dark .theme-option__browser {
+  background: #101521;
+  border: 1px solid rgba(39, 200, 232, 0.15);
+}
+
+.theme-option__browser-top {
+  width: 36%;
+  height: 5px;
+
+  background: #aeb8bd;
+  border-radius: 999px;
+}
+
+.theme-option__browser-title {
+  width: 72%;
+  height: 9px;
+
+  background: currentColor;
+  border-radius: 999px;
+
+  opacity: 0.78;
+}
+
+.theme-option__browser-text {
+  width: 54%;
+  height: 5px;
+
+  background: currentColor;
+  border-radius: 999px;
+
+  opacity: 0.28;
+}
+
+.theme-option__browser-button {
+  width: 42%;
+  height: 15px;
+  margin-top: 0.2rem;
+
+  background: #27c8e8;
+  border-radius: 999px;
+}
+
+/* =========================
+   INFORMACIÓN
+========================= */
+
+.theme-option__information {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.theme-option__information strong {
+  font-size: 1.15rem;
+}
+
+.theme-option__information small {
+  color: currentColor;
+
+  opacity: 0.6;
+
+  font-size: 0.84rem;
+  line-height: 1.4;
+}
+
+/* =========================
+   FLECHA
+========================= */
+
+.theme-option__arrow {
+  display: grid;
+  place-items: center;
+
+  width: 36px;
+  height: 36px;
+
+  border: 1px solid currentColor;
+  border-radius: 50%;
+
+  opacity: 0.55;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.theme-option:hover .theme-option__arrow {
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+/* =========================
+   ACCESIBILIDAD
+========================= */
+
+.theme-option:focus-visible {
+  outline: 3px solid rgba(39, 200, 232, 0.45);
+  outline-offset: 5px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
+  .theme-selection {
+    place-items: start center;
+    padding: 2rem 1.5rem;
+  }
+
+  .theme-selection__options {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 520px) {
+  .theme-selection {
+    padding: 1.5rem 1rem;
+  }
+
+  .theme-selection__brand {
+    margin-bottom: 1.2rem;
+  }
+
+  .theme-selection__brand img {
+    width: 160px;
+  }
+
+  .theme-selection h1 {
+    font-size: clamp(2rem, 10vw, 2.8rem);
+  }
+
+  .theme-selection__content > p {
+    margin-bottom: 1.6rem;
+  }
+
+  .theme-option {
+    grid-template-columns: 95px 1fr auto;
+    gap: 0.75rem;
+
+    padding: 0.8rem;
+
+    border-radius: 18px;
+  }
+
+  .theme-option__preview {
+    min-height: 82px;
+    padding: 0.6rem;
+  }
+
+  .theme-option__browser {
+    padding: 0.6rem;
+  }
+
+  .theme-option__information strong {
+    font-size: 1rem;
+  }
+
+  .theme-option__information small {
+    font-size: 0.72rem;
+  }
+
+  .theme-option__arrow {
+    width: 30px;
+    height: 30px;
+  }
+}

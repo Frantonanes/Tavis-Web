@@ -1,0 +1,619 @@
+/* =========================
+   TEMA CLARO
+========================= */
+
+:root,
+html[data-theme='light'] {
+  --contact-title: #073b4c;
+  --contact-text: #617077;
+  --contact-accent: #18bbd1;
+  --contact-secondary: #b59a6a;
+  --contact-border: rgba(7, 59, 76, 0.12);
+
+  --contact-eyebrow-bg: rgba(24, 187, 209, 0.08);
+  --contact-eyebrow-border: rgba(24, 187, 209, 0.28);
+
+  --contact-guide-bg:
+    radial-gradient(
+      circle at top right,
+      rgba(24, 187, 209, 0.15),
+      transparent 38%
+    ),
+    linear-gradient(
+      145deg,
+      #073b4c,
+      #0b5268
+    );
+
+  --contact-guide-title: #ffffff;
+  --contact-guide-text: rgba(255, 255, 255, 0.7);
+  --contact-guide-border: rgba(24, 187, 209, 0.25);
+
+  --contact-card-bg:
+    linear-gradient(
+      145deg,
+      rgba(250, 250, 248, 0.96),
+      rgba(233, 238, 237, 0.8)
+    );
+
+  --contact-card-border: rgba(7, 59, 76, 0.11);
+  --contact-card-hover-border: rgba(24, 187, 209, 0.38);
+
+  --contact-card-shadow:
+    0 16px 42px rgba(7, 59, 76, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+
+  --contact-card-hover-shadow:
+    0 24px 58px rgba(7, 59, 76, 0.13),
+    0 0 25px rgba(24, 187, 209, 0.08);
+
+  --contact-number-bg: rgba(24, 187, 209, 0.1);
+  --contact-number-border: rgba(24, 187, 209, 0.24);
+
+  --contact-note-bg: rgba(255, 255, 255, 0.07);
+  --contact-note-border: rgba(255, 255, 255, 0.12);
+
+  --contact-trust-bg: rgba(250, 250, 248, 0.6);
+  --contact-primary-glow: rgba(24, 187, 209, 0.08);
+  --contact-secondary-glow: rgba(181, 154, 106, 0.07);
+}
+
+/* =========================
+   TEMA OSCURO
+========================= */
+
+html[data-theme='dark'] {
+  --contact-title: #f4f7fa;
+  --contact-text: rgba(205, 215, 226, 0.65);
+  --contact-accent: #27c8e8;
+  --contact-secondary: #27c8e8;
+  --contact-border: rgba(210, 222, 233, 0.08);
+
+  --contact-eyebrow-bg: rgba(39, 200, 232, 0.06);
+  --contact-eyebrow-border: rgba(39, 200, 232, 0.2);
+
+  --contact-guide-bg:
+    radial-gradient(
+      circle at top right,
+      rgba(39, 200, 232, 0.12),
+      transparent 40%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(12, 25, 38, 0.98),
+      rgba(7, 12, 20, 0.96)
+    );
+
+  --contact-guide-title: #f4f7fa;
+  --contact-guide-text: rgba(205, 215, 226, 0.68);
+  --contact-guide-border: rgba(39, 200, 232, 0.18);
+
+  --contact-card-bg:
+    linear-gradient(
+      145deg,
+      rgba(15, 21, 32, 0.96),
+      rgba(9, 14, 23, 0.9)
+    );
+
+  --contact-card-border: rgba(210, 222, 233, 0.08);
+  --contact-card-hover-border: rgba(39, 200, 232, 0.36);
+
+  --contact-card-shadow:
+    0 18px 46px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+  --contact-card-hover-shadow:
+    0 26px 65px rgba(0, 0, 0, 0.36),
+    0 0 28px rgba(39, 200, 232, 0.08);
+
+  --contact-number-bg: rgba(39, 200, 232, 0.07);
+  --contact-number-border: rgba(39, 200, 232, 0.18);
+
+  --contact-note-bg: rgba(255, 255, 255, 0.025);
+  --contact-note-border: rgba(210, 222, 233, 0.08);
+
+  --contact-trust-bg: rgba(255, 255, 255, 0.018);
+  --contact-primary-glow: rgba(39, 200, 232, 0.06);
+  --contact-secondary-glow: rgba(39, 200, 232, 0.025);
+}
+
+/* =========================
+   SECCIÓN
+========================= */
+
+.contact-section {
+  position: relative;
+
+  width: min(1240px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 6rem 0;
+
+  border-top: 1px solid var(--contact-border);
+}
+
+.contact-section::before,
+.contact-section::after {
+  content: '';
+
+  position: absolute;
+
+  border-radius: 50%;
+  filter: blur(85px);
+
+  pointer-events: none;
+}
+
+.contact-section::before {
+  top: 10%;
+  right: -12rem;
+
+  width: 28rem;
+  height: 28rem;
+
+  background: var(--contact-primary-glow);
+}
+
+.contact-section::after {
+  bottom: 0;
+  left: -10rem;
+
+  width: 22rem;
+  height: 22rem;
+
+  background: var(--contact-secondary-glow);
+}
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.contact-section__heading {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr);
+  align-items: end;
+  gap: 3rem;
+
+  margin-bottom: 3rem;
+}
+
+.contact-section__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+
+  margin: 0 0 1.4rem;
+  padding: 0.5rem 0.9rem;
+
+  color: var(--contact-accent);
+  background: var(--contact-eyebrow-bg);
+  border: 1px solid var(--contact-eyebrow-border);
+  border-radius: 999px;
+
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.contact-section__eyebrow span {
+  width: 6px;
+  height: 6px;
+
+  background: var(--contact-secondary);
+  border-radius: 50%;
+  box-shadow: 0 0 14px var(--contact-secondary);
+}
+
+.contact-section__heading h2 {
+  max-width: 800px;
+  margin: 0;
+
+  color: var(--contact-title);
+
+  font-size: clamp(2.6rem, 5.5vw, 4.8rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.065em;
+}
+
+.contact-section__heading h2 span {
+  color: var(--contact-accent);
+}
+
+.contact-section__introduction {
+  margin: 0;
+
+  color: var(--contact-text);
+
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.contact-section__content {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: minmax(340px, 0.8fr) minmax(0, 1.2fr);
+  align-items: stretch;
+  gap: 1.4rem;
+}
+
+/* =========================
+   GUÍA
+========================= */
+
+.contact-section__guide {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 490px;
+  padding: clamp(1.6rem, 3vw, 2.2rem);
+
+  color: var(--contact-guide-title);
+  background: var(--contact-guide-bg);
+  border: 1px solid var(--contact-guide-border);
+  border-radius: 1.5rem;
+
+  box-shadow:
+    0 24px 65px rgba(7, 59, 76, 0.2),
+    0 0 30px rgba(24, 187, 209, 0.08);
+}
+
+.contact-section__guide-label {
+  display: inline-flex;
+
+  width: fit-content;
+  margin-bottom: 2rem;
+  padding: 0.45rem 0.75rem;
+
+  color: var(--contact-accent);
+  background: var(--contact-note-bg);
+  border: 1px solid var(--contact-note-border);
+  border-radius: 999px;
+
+  font-size: 0.94rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.contact-section__guide h3 {
+  margin: 0 0 1rem;
+
+  color: var(--contact-guide-title);
+
+  font-size: clamp(1.7rem, 3vw, 2.8rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.05em;
+}
+
+.contact-section__guide > p {
+  margin: 0 0 1.6rem;
+
+  color: var(--contact-guide-text);
+
+  font-size: 1.16rem;
+  line-height: 1.7;
+}
+
+.contact-section__guide ul {
+  display: grid;
+  gap: 0.8rem;
+
+  margin: 0 0 2rem;
+  padding: 0;
+
+  list-style: none;
+}
+
+.contact-section__guide li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+
+  color: var(--contact-guide-text);
+
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.contact-section__guide li > span {
+  flex-shrink: 0;
+
+  color: var(--contact-accent);
+  font-weight: 900;
+}
+
+.contact-section__note {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+
+  margin-top: auto;
+  padding: 1rem;
+
+  background: var(--contact-note-bg);
+  border: 1px solid var(--contact-note-border);
+  border-radius: 1rem;
+}
+
+.contact-section__note strong {
+  color: var(--contact-guide-title);
+
+  font-size: 1.05rem;
+  font-weight: 900;
+}
+
+.contact-section__note span {
+  color: var(--contact-guide-text);
+  font-size: 0.98rem;
+}
+
+/* =========================
+   OPCIONES
+========================= */
+
+.contact-section__options {
+  display: grid;
+  align-content: stretch;
+  gap: 1rem;
+}
+
+/* =========================
+   TARJETA DE CONTACTO
+========================= */
+
+.contact-section__card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1.2rem;
+
+  min-width: 0;
+  min-height: 150px;
+  padding: 1.4rem;
+
+  color: var(--contact-title);
+  background: var(--contact-card-bg);
+  border: 1px solid var(--contact-card-border);
+  border-radius: 1.3rem;
+
+  box-shadow: var(--contact-card-shadow);
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.contact-section__card:hover {
+  border-color: var(--contact-card-hover-border);
+  box-shadow: var(--contact-card-hover-shadow);
+  transform: translateX(5px);
+}
+
+.contact-section__card:focus-visible {
+  outline: 3px solid var(--contact-accent);
+  outline-offset: 5px;
+}
+
+.contact-section__number {
+  display: grid;
+  place-items: center;
+
+  width: 2.8rem;
+  height: 2.8rem;
+
+  color: var(--contact-accent);
+  background: var(--contact-number-bg);
+  border: 1px solid var(--contact-number-border);
+  border-radius: 0.8rem;
+
+  font-size: 0.84rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.contact-section__card-content h3 {
+  margin: 0 0 0.55rem;
+
+  color: var(--contact-title);
+
+  font-size: 1.45rem;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+.contact-section__card-content p {
+  margin: 0;
+
+  color: var(--contact-text);
+
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.contact-section__arrow {
+  display: grid;
+  place-items: center;
+
+  width: 2.7rem;
+  height: 2.7rem;
+
+  color: var(--contact-accent);
+  background: var(--contact-number-bg);
+  border: 1px solid var(--contact-number-border);
+  border-radius: 50%;
+
+  font-size: 1.16rem;
+  font-weight: 900;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.contact-section__card:hover .contact-section__arrow {
+  color: var(--contact-guide-title);
+  background: var(--contact-accent);
+  transform: translateX(3px);
+}
+
+/* =========================
+   GARANTÍAS
+========================= */
+
+.contact-section__trust {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+
+  margin-top: 1.4rem;
+  padding: 1rem;
+
+  color: var(--contact-text);
+  background: var(--contact-trust-bg);
+  border: 1px solid var(--contact-border);
+  border-radius: 999px;
+
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.contact-section__trust span {
+  display: inline-flex;
+  align-items: center;
+}
+
+.contact-section__trust span:not(:last-child)::after {
+  content: '•';
+
+  margin: 0 1.2rem;
+
+  color: var(--contact-accent);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .contact-section {
+    padding: 5rem 0;
+  }
+
+  .contact-section__heading {
+    grid-template-columns: 1fr;
+    gap: 1.3rem;
+  }
+
+  .contact-section__introduction {
+    max-width: 650px;
+  }
+
+  .contact-section__content {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-section__guide {
+    min-height: auto;
+  }
+}
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 560px) {
+  .contact-section {
+    padding: 4rem 0;
+  }
+
+  .contact-section::before {
+    right: -18rem;
+  }
+
+  .contact-section::after {
+    left: -16rem;
+  }
+
+  .contact-section__heading {
+    margin-bottom: 2.3rem;
+  }
+
+  .contact-section__eyebrow {
+    font-size: 0.76rem;
+    letter-spacing: 0.11em;
+  }
+
+  .contact-section__heading h2 {
+    font-size: clamp(2.1rem, 12vw, 3.2rem);
+  }
+
+  .contact-section__introduction {
+    font-size: 0.96rem;
+  }
+
+  .contact-section__guide {
+    padding: 1.3rem;
+    border-radius: 1.2rem;
+  }
+
+  .contact-section__guide h3 {
+    font-size: 1.8rem;
+  }
+
+  .contact-section__card {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.9rem;
+
+    min-height: 140px;
+    padding: 1.1rem;
+
+    border-radius: 1.1rem;
+  }
+
+  .contact-section__arrow {
+    display: none;
+  }
+
+  .contact-section__card-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .contact-section__card-content p {
+    font-size: 0.84rem;
+  }
+
+  .contact-section__trust {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.65rem;
+
+    border-radius: 1rem;
+  }
+
+  .contact-section__trust span:not(:last-child)::after {
+    display: none;
+  }
+}
