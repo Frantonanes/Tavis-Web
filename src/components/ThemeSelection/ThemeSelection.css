@@ -92,7 +92,7 @@
   text-transform: uppercase;
 }
 
-.theme-selection h1 {
+.theme-selection h2 {
   max-width: 720px;
   margin: 0 auto 1rem;
 
@@ -372,6 +372,20 @@
 /* =========================
    MOBILE
 ========================= */
+@media (prefers-reduced-motion: reduce) {
+  .theme-option,
+  .theme-option__arrow {
+    transition: none;
+  }
+
+  .theme-option:hover {
+    transform: none;
+  }
+
+  .theme-option:hover .theme-option__arrow {
+    transform: none;
+  }
+}
 
 @media (max-width: 520px) {
   .theme-selection {

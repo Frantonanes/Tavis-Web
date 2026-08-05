@@ -10,22 +10,30 @@ export default function ThemeSelection({
   onSelect
 }: ThemeSelectionProps) {
   return (
-    <section className="theme-selection">
+    <section
+      className="theme-selection"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="theme-selection-title"
+      aria-describedby="theme-selection-description"
+    >
       <div className="theme-selection__content">
         <div className="theme-selection__brand">
           <img
             src="/isologo-tavis-dark.png"
-            alt="Tavis"
+            alt="Estudio Tavis"
           />
         </div>
 
         <span className="theme-selection__eyebrow">
-          Bienvenido a Tavis
+          Bienvenido a Estudio Tavis
         </span>
 
-        <h1>¿Cómo querés explorar nuestra web?</h1>
+        <h2 id="theme-selection-title">
+          ¿Cómo querés explorar nuestra web?
+        </h2>
 
-        <p>
+        <p id="theme-selection-description">
           Una misma experiencia, con dos estilos diferentes.
         </p>
 
@@ -34,7 +42,8 @@ export default function ThemeSelection({
             className="theme-option theme-option--light"
             type="button"
             onClick={() => onSelect('light')}
-            aria-label="Explorar Tavis en modo claro"
+            aria-label="Explorar Estudio Tavis en modo claro"
+            autoFocus
           >
             <span
               className="theme-option__preview"
@@ -65,7 +74,7 @@ export default function ThemeSelection({
             className="theme-option theme-option--dark"
             type="button"
             onClick={() => onSelect('dark')}
-            aria-label="Explorar Tavis en modo oscuro"
+            aria-label="Explorar Estudio Tavis en modo oscuro"
           >
             <span
               className="theme-option__preview"
