@@ -24,11 +24,11 @@ export default function HeroSection() {
           </h1>
 
           <p className="hero__text">
-            Creamos páginas web profesionales para emprendimientos y negocios
-            que quieren crecer, mostrar lo que hacen y generar nuevas
-            oportunidades. Te acompañamos durante todo el proceso para que dar
-            el paso sea más simple de lo que imaginás.
-          </p>
+  Diseñamos y desarrollamos páginas web profesionales para emprendimientos y
+  negocios que quieren crecer, mostrar lo que ofrecen y generar nuevas
+  oportunidades. Te acompañamos durante todo el proceso para que dar el paso
+  sea más simple de lo que imaginás.
+</p>
 
           <div className="hero__actions">
             <a
@@ -47,10 +47,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <aside
-          className="hero-preview"
-          aria-label="Vista previa de una web profesional"
-        >
+        <div className="hero-preview" aria-hidden="true">
           <div className="hero-preview__top">
             <div className="hero-preview__dots">
               <span />
@@ -91,7 +88,7 @@ export default function HeroSection() {
           <div className="hero-preview__tag hero-preview__tag--optimized">
             Optimizado
           </div>
-        </aside>
+        </div>
       </div>
     </section>
   )

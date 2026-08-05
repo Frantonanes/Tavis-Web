@@ -1,5 +1,4 @@
 import jazzMusicLogo from '../assets/projects/Logo_jazz_music_oscuro.png'
-import futbolAnaliticoLogo from '../assets/projects/FutbolAnaliticoLogo.png'
 import byChandanaLogo from '../assets/projects/Bychandana_isologo.jpeg'
 
 export const whatsappNumber = '5491156152870'
@@ -54,6 +53,22 @@ export const webStyles = [
       'Hola, quiero consultar por el desarrollo de una web de servicios.'
   },
   {
+    category: 'Campañas y promociones',
+    title: 'Landing page',
+    text:
+      'Una página enfocada en presentar una propuesta concreta y convertir visitas en consultas, reservas o ventas.',
+    features: [
+      'Diseño enfocado en conversiones',
+      'Presentación clara de la propuesta',
+      'Llamadas a la acción',
+      'Contacto directo por WhatsApp',
+      'Adaptación a celulares',
+      'Optimización básica para buscadores'
+    ],
+    message:
+      'Hola, quiero consultar por el desarrollo de una landing page.'
+  },
+  {
     category: 'Marca personal',
     title: 'Web personal',
     text:
@@ -68,6 +83,22 @@ export const webStyles = [
     ],
     message:
       'Hola, quiero consultar por el desarrollo de una web personal.'
+  },
+  {
+    category: 'Soporte para tu sitio',
+    title: 'Mantenimiento web',
+    text:
+      'Un servicio para mantener tu página actualizada, funcionando correctamente y acompañar los cambios que necesite tu negocio.',
+    features: [
+      'Actualización de contenidos',
+      'Corrección de errores',
+      'Cambios en textos e imágenes',
+      'Mejoras de funcionamiento',
+      'Revisión general del sitio',
+      'Soporte técnico'
+    ],
+    message:
+      'Hola, quiero consultar por el servicio de mantenimiento web.'
   }
 ]
 
@@ -82,18 +113,9 @@ export const projects = [
     glow: 'rgba(181, 154, 106, 0.24)'
   },
   {
-    name: 'Fútbol Analítico',
-    description:
-      'Portal deportivo con noticias, predicciones, buscador y panel de administración.',
-    url: 'https://futbolanalitico.com',
-    logo: futbolAnaliticoLogo,
-    background: '#071827',
-    glow: 'rgba(24, 187, 209, 0.22)'
-  },
-  {
     name: 'ByChandana',
     description:
-      'Web institucional para una marca con dominio propio y presencia profesional.',
+      'Tienda online de libros con catálogo, carrito de compras, filtros, pedidos por WhatsApp y panel de administración.',
     url: 'https://bychandana.com',
     logo: byChandanaLogo,
     background: '#f4ece4',
