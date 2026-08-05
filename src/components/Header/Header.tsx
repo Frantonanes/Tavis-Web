@@ -29,14 +29,16 @@ export default function Header({
           onClick={closeMenu}
         >
           <img
-            className="brand__logo"
-            src={
-              isDark
-                ? '/isologo-tavis-dark.png'
-                : '/isologo-tavis-light.png'
-            }
-            alt="Estudio Tavis"
-          />
+  className="brand__logo"
+  src={
+    isDark
+      ? '/isologo-tavis-dark.webp'
+      : '/isologo-tavis-light.webp'
+  }
+  width={440}
+  height={isDark ? 248 : 201}
+  alt="Estudio Tavis"
+/>
         </a>
 
         <nav

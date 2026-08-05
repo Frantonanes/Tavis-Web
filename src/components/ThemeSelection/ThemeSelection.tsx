@@ -20,9 +20,12 @@ export default function ThemeSelection({
       <div className="theme-selection__content">
         <div className="theme-selection__brand">
           <img
-            src="/isologo-tavis-dark.png"
-            alt="Estudio Tavis"
-          />
+  src="/isologo-tavis-dark.webp"
+  width={440}
+  height={248}
+  alt="Estudio Tavis"
+  fetchPriority="high"
+/>
         </div>
 
         <span className="theme-selection__eyebrow">
