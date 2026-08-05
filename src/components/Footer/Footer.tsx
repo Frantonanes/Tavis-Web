@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import './Footer.css'
 
@@ -8,6 +8,9 @@ export default function Footer() {
   const [openDocument, setOpenDocument] =
     useState<LegalDocument | null>(null)
 
+  const modalRef = useRef<HTMLElement>(null)
+  const previousFocusedElement = useRef<HTMLElement | null>(null)
+
   const currentYear = new Date().getFullYear()
 
   useEffect(() => {
@@ -15,12 +18,65 @@ export default function Footer() {
       return
     }
 
+    previousFocusedElement.current =
+      document.activeElement instanceof HTMLElement
+        ? document.activeElement
+        : null
+
     const previousOverflow = document.body.style.overflow
     document.body.style.overflow = 'hidden'
+
+    const focusableSelector = [
+      'a[href]',
+      'button:not([disabled])',
+      'input:not([disabled])',
+      'select:not([disabled])',
+      'textarea:not([disabled])',
+      '[tabindex]:not([tabindex="-1"])'
+    ].join(',')
 
     function handleKeyDown(event: KeyboardEvent) {
       if (event.key === 'Escape') {
         setOpenDocument(null)
+        return
+      }
+
+      if (
+        event.key !== 'Tab' ||
+        !modalRef.current
+      ) {
+        return
+      }
+
+      const focusableElements = Array.from(
+        modalRef.current.querySelectorAll<HTMLElement>(
+          focusableSelector
+        )
+      )
+
+      const firstElement = focusableElements[0]
+      const lastElement =
+        focusableElements[focusableElements.length - 1]
+
+      if (!firstElement || !lastElement) {
+        return
+      }
+
+      if (
+        event.shiftKey &&
+        document.activeElement === firstElement
+      ) {
+        event.preventDefault()
+        lastElement.focus()
+        return
+      }
+
+      if (
+        !event.shiftKey &&
+        document.activeElement === lastElement
+      ) {
+        event.preventDefault()
+        firstElement.focus()
       }
     }
 
@@ -29,6 +85,7 @@ export default function Footer() {
     return () => {
       document.body.style.overflow = previousOverflow
       window.removeEventListener('keydown', handleKeyDown)
+      previousFocusedElement.current?.focus()
     }
   }, [openDocument])
 
@@ -44,14 +101,14 @@ export default function Footer() {
             <a
               className="site-footer__logo"
               href="#inicio"
-              aria-label="Volver al inicio"
+              aria-label="Volver al inicio de Estudio Tavis"
             >
-              Tavis<span>.</span>
+              Estudio Tavis<span>.</span>
             </a>
 
             <p>
-              Diseñamos y desarrollamos soluciones web claras, funcionales y
-              adaptadas a los objetivos de cada negocio.
+              Diseñamos y desarrollamos soluciones web claras,
+              funcionales y adaptadas a los objetivos de cada negocio.
             </p>
 
             <span className="site-footer__location">
@@ -70,7 +127,10 @@ export default function Footer() {
             <a href="#inicio">Inicio</a>
             <a href="#estilos">Tipos de web</a>
             <a href="#trabajos">Proyectos</a>
-            <a href="#sobre-nosotros">Sobre Tavis</a>
+            <a href="#sobre-nosotros">
+              Sobre Estudio Tavis
+            </a>
+            <a href="#contacto">Contacto</a>
           </nav>
 
           <div className="site-footer__contact">
@@ -81,8 +141,8 @@ export default function Footer() {
             <h2>¿Tenés una idea para tu próxima web?</h2>
 
             <p>
-              Contanos sobre tu proyecto y te ayudamos a encontrar la solución
-              indicada.
+              Contanos sobre tu proyecto y te ayudamos a encontrar la
+              solución indicada.
             </p>
 
             <a href="#contacto">
@@ -92,7 +152,10 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="site-footer__legal">
+        <div
+          className="site-footer__legal"
+          aria-label="Información legal"
+        >
           <button
             type="button"
             onClick={() => setOpenDocument('privacy')}
@@ -117,7 +180,8 @@ export default function Footer() {
 
         <div className="site-footer__bottom">
           <p>
-            © {currentYear} Tavis. Todos los derechos reservados.
+            © {currentYear} Estudio Tavis. Todos los derechos
+            reservados.
           </p>
 
           <span>Diseño y desarrollo web</span>
@@ -127,10 +191,10 @@ export default function Footer() {
       {openDocument && (
         <div
           className="legal-modal"
-          role="presentation"
           onMouseDown={closeModal}
         >
           <article
+            ref={modalRef}
             className="legal-modal__dialog"
             role="dialog"
             aria-modal="true"
@@ -141,7 +205,7 @@ export default function Footer() {
               className="legal-modal__close"
               type="button"
               onClick={closeModal}
-              aria-label="Cerrar"
+              aria-label="Cerrar documento legal"
               autoFocus
             >
               <span aria-hidden="true">×</span>
@@ -159,62 +223,74 @@ export default function Footer() {
                   </h2>
 
                   <p className="legal-modal__updated">
-                    Última actualización: 17 de julio de 2026
+                    Última actualización: 5 de agosto de 2026
                   </p>
 
                   <section>
                     <h3>Responsable</h3>
+
                     <p>
-                      Tavis es un estudio de desarrollo web dirigido por Franco
-                      Toñanes, con sede en Buenos Aires, Argentina.
+                      Estudio Tavis es un estudio de diseño y
+                      desarrollo web dirigido por Franco Toñanes, con
+                      sede en Buenos Aires, Argentina.
                     </p>
                   </section>
 
                   <section>
                     <h3>Información recopilada</h3>
+
                     <p>
-                      La web no cuenta actualmente con formularios propios. Los
-                      datos que envíes voluntariamente mediante WhatsApp serán
-                      utilizados para responder consultas y preparar propuestas
+                      La web no cuenta actualmente con formularios
+                      propios. Los datos que envíes voluntariamente
+                      mediante WhatsApp serán utilizados para
+                      responder consultas y preparar propuestas
                       relacionadas con nuestros servicios.
                     </p>
                   </section>
 
                   <section>
                     <h3>Finalidad</h3>
+
                     <p>
-                      La información recibida se utiliza exclusivamente para
-                      responder consultas, evaluar proyectos, preparar
-                      presupuestos y mantener comunicaciones vinculadas con los
+                      La información recibida se utiliza
+                      exclusivamente para responder consultas,
+                      evaluar proyectos, preparar presupuestos y
+                      mantener comunicaciones vinculadas con los
                       servicios solicitados.
                     </p>
                   </section>
 
                   <section>
                     <h3>Servicios de terceros</h3>
+
                     <p>
-                      Los enlaces a WhatsApp y otros servicios externos están
-                      sujetos a las políticas de privacidad de sus respectivos
-                      proveedores. Tavis no vende ni comercializa los datos
+                      Los enlaces a WhatsApp y otros servicios
+                      externos están sujetos a las políticas de
+                      privacidad de sus respectivos proveedores.
+                      Estudio Tavis no vende ni comercializa los datos
                       personales recibidos.
                     </p>
                   </section>
 
                   <section>
                     <h3>Derechos sobre tus datos</h3>
+
                     <p>
-                      Podés solicitar el acceso, actualización, rectificación o
-                      eliminación de tus datos mediante los canales de contacto
-                      publicados en esta web.
+                      Podés solicitar el acceso, actualización,
+                      rectificación o eliminación de tus datos
+                      mediante los canales de contacto publicados en
+                      esta web.
                     </p>
                   </section>
 
                   <section>
                     <h3>Seguridad y conservación</h3>
+
                     <p>
-                      Los datos se conservarán únicamente durante el tiempo
-                      necesario para responder la consulta, mantener la relación
-                      comercial o cumplir obligaciones legales.
+                      Los datos se conservarán únicamente durante el
+                      tiempo necesario para responder la consulta,
+                      mantener la relación comercial o cumplir
+                      obligaciones legales.
                     </p>
                   </section>
                 </>
@@ -231,63 +307,74 @@ export default function Footer() {
                   </h2>
 
                   <p className="legal-modal__updated">
-                    Última actualización: 17 de julio de 2026
+                    Última actualización: 5 de agosto de 2026
                   </p>
 
                   <section>
                     <h3>Finalidad del sitio</h3>
+
                     <p>
-                      Este sitio presenta los servicios y proyectos de Tavis.
-                      Su contenido es informativo y puede ser actualizado sin
-                      previo aviso.
+                      Este sitio presenta los servicios y proyectos
+                      de Estudio Tavis. Su contenido es informativo y
+                      puede ser actualizado sin previo aviso.
                     </p>
                   </section>
 
                   <section>
                     <h3>Consultas y presupuestos</h3>
+
                     <p>
-                      El envío de una consulta no constituye una contratación.
-                      Los precios, plazos, entregables y condiciones de cada
-                      proyecto serán establecidos mediante una propuesta
-                      particular aceptada por ambas partes.
+                      El envío de una consulta no constituye una
+                      contratación. Los precios, plazos, entregables
+                      y condiciones de cada proyecto serán
+                      establecidos mediante una propuesta particular
+                      aceptada por ambas partes.
                     </p>
                   </section>
 
                   <section>
                     <h3>Propiedad intelectual</h3>
+
                     <p>
-                      El diseño, los textos, la identidad visual y los elementos
-                      propios de esta web pertenecen a Tavis, salvo que se
-                      indique lo contrario. Los proyectos exhibidos conservan
-                      los derechos correspondientes de sus propietarios.
+                      El diseño, los textos, la identidad visual y los
+                      elementos propios de esta web pertenecen a
+                      Estudio Tavis, salvo que se indique lo
+                      contrario. Los proyectos exhibidos conservan
+                      los derechos correspondientes de sus
+                      propietarios.
                     </p>
                   </section>
 
                   <section>
                     <h3>Enlaces externos</h3>
+
                     <p>
-                      La web puede contener enlaces a sitios y plataformas de
-                      terceros. Tavis no controla su disponibilidad, seguridad
-                      ni políticas.
+                      La web puede contener enlaces a sitios y
+                      plataformas de terceros. Estudio Tavis no
+                      controla su disponibilidad, seguridad ni
+                      políticas.
                     </p>
                   </section>
 
                   <section>
                     <h3>Contratación de servicios</h3>
+
                     <p>
-                      Cada trabajo se regirá por su presupuesto o contrato,
-                      donde se definirán alcance, pagos, revisiones, plazos,
-                      mantenimiento, dominio, hosting y propiedad del trabajo
-                      entregado.
+                      Cada trabajo se regirá por su presupuesto o
+                      contrato, donde se definirán alcance, pagos,
+                      revisiones, plazos, mantenimiento, dominio,
+                      hosting y propiedad del trabajo entregado.
                     </p>
                   </section>
 
                   <section>
                     <h3>Legislación aplicable</h3>
+
                     <p>
-                      Estos términos se interpretan conforme a la legislación
-                      vigente de la República Argentina, respetando los derechos
-                      irrenunciables de consumidores y usuarios.
+                      Estos términos se interpretan conforme a la
+                      legislación vigente de la República Argentina,
+                      respetando los derechos irrenunciables de
+                      consumidores y usuarios.
                     </p>
                   </section>
                 </>
@@ -304,52 +391,60 @@ export default function Footer() {
                   </h2>
 
                   <p className="legal-modal__updated">
-                    Última actualización: 17 de julio de 2026
+                    Última actualización: 5 de agosto de 2026
                   </p>
 
                   <section>
                     <h3>Uso actual</h3>
+
                     <p>
-                      Actualmente, esta web no utiliza cookies publicitarias ni
-                      de seguimiento.
+                      Actualmente, esta web no utiliza cookies
+                      publicitarias ni herramientas de seguimiento.
                     </p>
                   </section>
 
                   <section>
                     <h3>Preferencia de tema</h3>
+
                     <p>
-                      La elección entre modo claro y oscuro se almacena
-                      localmente en tu navegador mediante localStorage. Esta
-                      información no identifica al usuario y se utiliza
-                      únicamente para recordar la preferencia visual.
+                      La elección entre modo claro y oscuro se guarda
+                      localmente en tu navegador mediante
+                      localStorage. Este almacenamiento no es una
+                      cookie, no permite identificarte y se utiliza
+                      únicamente para recordar tu preferencia visual.
                     </p>
                   </section>
 
                   <section>
                     <h3>Servicios externos</h3>
+
                     <p>
-                      Al ingresar en enlaces externos, como WhatsApp, esos
-                      servicios pueden utilizar sus propias cookies y
-                      tecnologías de almacenamiento conforme a sus políticas.
+                      Al ingresar en enlaces externos, como WhatsApp,
+                      esos servicios pueden utilizar sus propias
+                      cookies y tecnologías de almacenamiento
+                      conforme a sus políticas.
                     </p>
                   </section>
 
                   <section>
                     <h3>Cambios futuros</h3>
+
                     <p>
-                      Si en el futuro se incorporan herramientas de analítica,
-                      publicidad o medición, esta política será actualizada y se
-                      solicitará el consentimiento correspondiente cuando sea
+                      Si en el futuro se incorporan herramientas de
+                      analítica, publicidad o medición, esta política
+                      será actualizada y se solicitará el
+                      consentimiento correspondiente cuando sea
                       necesario.
                     </p>
                   </section>
 
                   <section>
                     <h3>Control del almacenamiento</h3>
+
                     <p>
                       Podés eliminar la preferencia guardada desde la
-                      configuración de almacenamiento o datos del sitio de tu
-                      navegador.
+                      configuración de almacenamiento o datos del
+                      sitio de tu navegador.
                     </p>
                   </section>
                 </>

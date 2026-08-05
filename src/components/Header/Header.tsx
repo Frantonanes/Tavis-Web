@@ -25,7 +25,7 @@ export default function Header({
         <a
           className="brand"
           href="#inicio"
-          aria-label="Ir al inicio de Tavis"
+          aria-label="Ir al inicio de Estudio Tavis"
           onClick={closeMenu}
         >
           <img
@@ -35,7 +35,7 @@ export default function Header({
                 ? '/isologo-tavis-dark.png'
                 : '/isologo-tavis-light.png'
             }
-            alt="Tavis"
+            alt="Estudio Tavis"
           />
         </a>
 

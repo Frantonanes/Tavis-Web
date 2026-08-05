@@ -9,7 +9,11 @@ const initialInformation = [
 
 export default function ContactSection() {
   return (
-    <section className="contact-section" id="contacto">
+    <section
+  className="contact-section"
+  id="contacto"
+  aria-labelledby="contact-title"
+>
       <div className="contact-section__heading">
         <div>
           <p className="contact-section__eyebrow">
@@ -17,10 +21,10 @@ export default function ContactSection() {
             Empecemos un proyecto
           </p>
 
-          <h2>
-            El primer paso puede ser una{' '}
-            <span>consulta simple.</span>
-          </h2>
+          <h2 id="contact-title">
+  El primer paso puede ser una{' '}
+  <span>consulta simple.</span>
+</h2>
         </div>
 
         <p className="contact-section__introduction">
@@ -64,7 +68,7 @@ export default function ContactSection() {
               href={option.href}
               key={option.title}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               aria-label={`${option.title} mediante WhatsApp`}
             >
               <span className="contact-section__number" aria-hidden="true">
