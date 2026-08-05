@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tavisweb.com/sitemap.xml
+Sitemap: https://estudiotavis.com/sitemap.xml
