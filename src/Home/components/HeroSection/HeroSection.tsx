@@ -58,7 +58,7 @@ export default function HeroSection() {
               <span />
             </div>
 
-            <div className="hero-preview__url">tavisweb.com.ar</div>
+            <div className="hero-preview__url">estudiotavis.com</div>
           </div>
 
           <div className="hero-preview__hero">
