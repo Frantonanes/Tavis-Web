@@ -36,7 +36,7 @@ export default function Header({
       : '/isologo-tavis-light.webp'
   }
   width={440}
-  height={isDark ? 248 : 201}
+  height={201}
   alt="Estudio Tavis"
 />
         </a>

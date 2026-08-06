@@ -115,8 +115,12 @@ html[data-theme='dark'] {
 .brand {
   display: flex;
   align-items: center;
+  justify-content: center;
 
-  width: fit-content;
+  width: 160px;
+  height: 73px;
+
+  overflow: hidden;
 
   text-decoration: none;
 }
@@ -124,10 +128,11 @@ html[data-theme='dark'] {
 .brand__logo {
   display: block;
 
-  width: 160px;
-  height: auto;
+  width: 100%;
+  height: 100%;
 
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
 
   transition:
     transform 0.2s ease,
@@ -135,7 +140,9 @@ html[data-theme='dark'] {
 }
 
 html[data-theme='dark'] .brand__logo {
-  filter: drop-shadow(0 0 12px rgba(39, 200, 232, 0.12));
+  filter: drop-shadow(
+    0 0 12px rgba(39, 200, 232, 0.12)
+  );
 }
 
 .brand:hover .brand__logo {
@@ -154,7 +161,7 @@ html[data-theme='dark'] .brand__logo {
 
   color: var(--header-text);
 
-  font-size: clamp(1.16rem, 1.1vw, 1.05rem);
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
   font-weight: 800;
 }
 
@@ -382,6 +389,7 @@ html[data-theme='dark'] .brand__logo {
 
   .brand__logo {
     width: 140px;
+    height: 64px;
   }
 
   .menu-toggle {
@@ -481,6 +489,7 @@ html[data-theme='dark'] .brand__logo {
 
   .brand__logo {
     width: 125px;
+    height: 57px;
   }
 
   .header-actions {

@@ -69,13 +69,13 @@ export const webStyles = [
       'Hola, vi el servicio de landing page en Estudio Tavis. Quiero promocionar una propuesta específica y convertir las visitas en consultas.'
   },
   {
-    category: 'Marca y portfolio',
+    category: 'Marca y portafolio',
     title: 'Web personal',
     text:
       'Un espacio profesional para presentar quién sos, contar tu experiencia, mostrar tus trabajos y reunir toda tu información en un mismo lugar.',
     features: [
       'Presentación personal o profesional',
-      'Portfolio de trabajos',
+      'Portafolio de trabajos',
       'Experiencia y habilidades',
       'Servicios ofrecidos',
       'Enlaces a redes y plataformas',
