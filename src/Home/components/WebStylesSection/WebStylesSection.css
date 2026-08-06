@@ -162,7 +162,7 @@ html[data-theme='dark'] {
   z-index: 1;
 
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.4rem;
 }
 
@@ -329,7 +329,11 @@ html[data-theme='dark'] {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-
+@media (max-width: 650px) {
+  .web-styles__grid {
+    grid-template-columns: 1fr;
+  }
+}
 @media (max-width: 560px) {
   .web-styles {
     padding: 4rem 0;
