@@ -5,100 +5,100 @@ export const whatsappNumber = '5491156152870'
 
 export const webStyles = [
   {
-    category: 'Venta online',
-    title: 'E-commerce',
+    category: 'Negocios y profesionales',
+    title: 'Web de servicios',
     text:
-      'Una tienda online completa para mostrar tus productos, recibir pedidos y vender directamente desde tu web.',
+      'Ideal para profesionales, emprendimientos y negocios que necesitan explicar qué hacen, mostrar sus trabajos y recibir nuevas consultas.',
     features: [
-      'Diseño adaptado a tu marca',
-      'Catálogo de productos',
-      'Carrito de compras',
-      'Integración con medios de pago',
-      'Panel para gestionar productos',
-      'Diseño adaptable a celulares'
+      'Presentación clara del negocio',
+      'Descripción de cada servicio',
+      'Trabajos o proyectos realizados',
+      'Opiniones de clientes',
+      'Contacto directo por WhatsApp',
+      'Preparación básica para Google'
     ],
     message:
-      'Hola, quiero consultar por el desarrollo de una tienda e-commerce.'
+      'Hola, vi el servicio de web para negocios y profesionales en Estudio Tavis. Quiero contarles sobre mi negocio y consultar qué tipo de página me conviene.'
   },
   {
     category: 'Presentación de productos',
     title: 'Catálogo digital',
     text:
-      'Una web organizada para presentar tus productos y facilitar que los clientes consulten mediante WhatsApp.',
+      'Pensado para mostrar productos de manera organizada sin cobrar desde la web. El cliente puede verlos, conocer sus detalles y consultar por WhatsApp.',
     features: [
-      'Categorías y filtros',
-      'Ficha individual de cada producto',
-      'Galería de imágenes',
-      'Consultas por WhatsApp',
+      'Productos organizados por categorías',
+      'Buscador y filtros',
+      'Fotos y descripción de cada producto',
+      'Consultas o pedidos por WhatsApp',
       'Panel para administrar productos',
-      'Diseño adaptable a celulares'
+      'Diseño adaptado a celulares'
     ],
     message:
-      'Hola, quiero consultar por el desarrollo de un catálogo digital.'
+      'Hola, vi el servicio de catálogo digital en Estudio Tavis. Quiero mostrar mis productos y recibir consultas o pedidos por WhatsApp.'
   },
   {
-    category: 'Negocios y profesionales',
-    title: 'Web de servicios',
+    category: 'Venta online',
+    title: 'E-commerce',
     text:
-      'Una página profesional para explicar lo que hacés, generar confianza y transformar visitas en consultas.',
+      'Una tienda online para que tus clientes puedan conocer los productos, agregarlos al carrito, pagar y completar su compra desde cualquier dispositivo.',
     features: [
-      'Presentación del negocio',
-      'Sección de servicios',
-      'Trabajos o casos realizados',
-      'Testimonios de clientes',
-      'Contacto directo por WhatsApp',
-      'Optimización básica para buscadores'
+      'Catálogo completo de productos',
+      'Buscador, categorías y filtros',
+      'Carrito de compras',
+      'Integración con medios de pago',
+      'Panel para administrar la tienda',
+      'Seguimiento de pedidos'
     ],
     message:
-      'Hola, quiero consultar por el desarrollo de una web de servicios.'
+      'Hola, vi el servicio de tienda e-commerce en Estudio Tavis. Quiero vender mis productos online y consultar cómo podríamos desarrollar la tienda.'
   },
   {
     category: 'Campañas y promociones',
     title: 'Landing page',
     text:
-      'Una página enfocada en presentar una propuesta concreta y convertir visitas en consultas, reservas o ventas.',
+      'Una página breve y directa para promocionar un servicio, producto, evento o campaña y guiar a las personas hacia una acción concreta.',
     features: [
-      'Diseño enfocado en conversiones',
-      'Presentación clara de la propuesta',
-      'Llamadas a la acción',
-      'Contacto directo por WhatsApp',
-      'Adaptación a celulares',
-      'Optimización básica para buscadores'
+      'Presentación de una propuesta específica',
+      'Diseño enfocado en conseguir consultas',
+      'Información clara y ordenada',
+      'Botones y llamadas a la acción',
+      'Contacto, reserva o inscripción',
+      'Adaptación a campañas publicitarias'
     ],
     message:
-      'Hola, quiero consultar por el desarrollo de una landing page.'
+      'Hola, vi el servicio de landing page en Estudio Tavis. Quiero promocionar una propuesta específica y convertir las visitas en consultas.'
   },
   {
-    category: 'Marca personal',
+    category: 'Marca y portfolio',
     title: 'Web personal',
     text:
-      'Un espacio propio para presentar quién sos, mostrar tu experiencia y reunir tus trabajos en un mismo lugar.',
+      'Un espacio profesional para presentar quién sos, contar tu experiencia, mostrar tus trabajos y reunir toda tu información en un mismo lugar.',
     features: [
-      'Presentación personal',
-      'Portfolio de proyectos',
+      'Presentación personal o profesional',
+      'Portfolio de trabajos',
       'Experiencia y habilidades',
-      'Enlaces a redes profesionales',
-      'Formulario o medios de contacto',
-      'Diseño adaptado a tu identidad'
+      'Servicios ofrecidos',
+      'Enlaces a redes y plataformas',
+      'Formulario o contacto directo'
     ],
     message:
-      'Hola, quiero consultar por el desarrollo de una web personal.'
+      'Hola, vi el servicio de web personal en Estudio Tavis. Quiero crear un espacio para presentar mi perfil y mostrar mis trabajos.'
   },
   {
-    category: 'Soporte para tu sitio',
+    category: 'Soporte para sitios existentes',
     title: 'Mantenimiento web',
     text:
-      'Un servicio para mantener tu página actualizada, funcionando correctamente y acompañar los cambios que necesite tu negocio.',
+      'Para negocios que ya tienen una página y necesitan mantenerla actualizada, corregir problemas o realizar mejoras sin desarrollar una web nueva.',
     features: [
-      'Actualización de contenidos',
+      'Actualización de textos e imágenes',
+      'Carga de productos o contenidos',
       'Corrección de errores',
-      'Cambios en textos e imágenes',
-      'Mejoras de funcionamiento',
-      'Revisión general del sitio',
+      'Mejoras visuales y funcionales',
+      'Revisión del funcionamiento',
       'Soporte técnico'
     ],
     message:
-      'Hola, quiero consultar por el servicio de mantenimiento web.'
+      'Hola, vi el servicio de mantenimiento web en Estudio Tavis. Ya tengo una página y necesito consultar por algunas actualizaciones o mejoras.'
   }
 ]
 
@@ -115,7 +115,7 @@ export const projects = [
   {
     name: 'ByChandana',
     description:
-      'Tienda online de libros con catálogo, carrito de compras, filtros, pedidos por WhatsApp y panel de administración.',
+      'Tienda online de productos artesanales con catálogo, carrito de compras, filtros, pedidos por WhatsApp y panel de administración.',
     url: 'https://bychandana.com',
     logo: byChandanaLogo,
     background: '#f4ece4',

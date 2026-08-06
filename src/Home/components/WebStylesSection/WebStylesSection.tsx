@@ -51,15 +51,15 @@ export default function WebStylesSection() {
             </ul>
 
             <a
-              className="web-style-card__link"
-              href={getWhatsappLink(style.message)}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`Consultar por ${style.category} mediante WhatsApp`}
-            >
-              Consultar
-              <span aria-hidden="true">→</span>
-            </a>
+  className="web-style-card__link"
+  href={getWhatsappLink(style.message)}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label={`Consultar por ${style.title} mediante WhatsApp`}
+>
+  Consultar este servicio
+  <span aria-hidden="true">→</span>
+</a>
           </article>
         ))}
       </div>
