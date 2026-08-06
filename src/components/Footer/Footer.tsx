@@ -213,242 +213,300 @@ export default function Footer() {
 
             <div className="legal-modal__content">
               {openDocument === 'privacy' && (
-                <>
-                  <span className="legal-modal__eyebrow">
-                    Información legal
-                  </span>
+  <>
+    <span className="legal-modal__eyebrow">
+      Información legal
+    </span>
 
-                  <h2 id="legal-modal-title">
-                    Política de privacidad
-                  </h2>
+    <h2 id="legal-modal-title">
+      Política de privacidad
+    </h2>
 
-                  <p className="legal-modal__updated">
-                    Última actualización: 5 de agosto de 2026
-                  </p>
+    <p className="legal-modal__updated">
+      Última actualización: 6 de agosto de 2026
+    </p>
 
-                  <section>
-                    <h3>Responsable</h3>
+    <section>
+      <h3>Responsable</h3>
 
-                    <p>
-                      Estudio Tavis es un estudio de diseño y
-                      desarrollo web dirigido por Franco Toñanes, con
-                      sede en Buenos Aires, Argentina.
-                    </p>
-                  </section>
+      <p>
+        Estudio Tavis es un estudio de diseño y desarrollo web
+        dirigido por Franco Toñanes, con sede en Buenos Aires,
+        Argentina.
+      </p>
+    </section>
 
-                  <section>
-                    <h3>Información recopilada</h3>
+    <section>
+      <h3>Información ingresada</h3>
 
-                    <p>
-                      La web no cuenta actualmente con formularios
-                      propios. Los datos que envíes voluntariamente
-                      mediante WhatsApp serán utilizados para
-                      responder consultas y preparar propuestas
-                      relacionadas con nuestros servicios.
-                    </p>
-                  </section>
+      <p>
+        El formulario de consulta puede solicitar tu nombre, el
+        nombre y rubro de tu negocio, el tipo de web que necesitás,
+        los objetivos del proyecto, las funcionalidades deseadas y
+        otra información que decidas proporcionar voluntariamente.
+      </p>
+    </section>
 
-                  <section>
-                    <h3>Finalidad</h3>
+    <section>
+      <h3>Funcionamiento del formulario</h3>
 
-                    <p>
-                      La información recibida se utiliza
-                      exclusivamente para responder consultas,
-                      evaluar proyectos, preparar presupuestos y
-                      mantener comunicaciones vinculadas con los
-                      servicios solicitados.
-                    </p>
-                  </section>
+      <p>
+        Las respuestas se procesan localmente en tu navegador para
+        preparar un mensaje de WhatsApp. Estudio Tavis no recibe,
+        almacena ni transmite esta información mientras completás el
+        formulario. Los datos se comparten únicamente cuando decidís
+        enviar el mensaje desde WhatsApp.
+      </p>
+    </section>
 
-                  <section>
-                    <h3>Servicios de terceros</h3>
+    <section>
+      <h3>Finalidad</h3>
 
-                    <p>
-                      Los enlaces a WhatsApp y otros servicios
-                      externos están sujetos a las políticas de
-                      privacidad de sus respectivos proveedores.
-                      Estudio Tavis no vende ni comercializa los datos
-                      personales recibidos.
-                    </p>
-                  </section>
+      <p>
+        Una vez enviado el mensaje, la información se utiliza para
+        responder la consulta, comprender las necesidades del
+        proyecto, brindar orientación, preparar presupuestos y
+        mantener comunicaciones relacionadas con los servicios
+        solicitados.
+      </p>
+    </section>
 
-                  <section>
-                    <h3>Derechos sobre tus datos</h3>
+    <section>
+      <h3>Consentimiento</h3>
 
-                    <p>
-                      Podés solicitar el acceso, actualización,
-                      rectificación o eliminación de tus datos
-                      mediante los canales de contacto publicados en
-                      esta web.
-                    </p>
-                  </section>
+      <p>
+        Antes de preparar la consulta, el formulario solicita tu
+        aceptación para utilizar la información ingresada con la
+        finalidad de iniciar la comunicación mediante WhatsApp.
+        Podés decidir no completar el formulario y utilizar otro
+        canal de contacto disponible.
+      </p>
+    </section>
 
-                  <section>
-                    <h3>Seguridad y conservación</h3>
+    <section>
+      <h3>WhatsApp y servicios externos</h3>
 
-                    <p>
-                      Los datos se conservarán únicamente durante el
-                      tiempo necesario para responder la consulta,
-                      mantener la relación comercial o cumplir
-                      obligaciones legales.
-                    </p>
-                  </section>
-                </>
-              )}
+      <p>
+        Al continuar hacia WhatsApp, el tratamiento de la
+        información también queda sujeto a las condiciones y
+        políticas de privacidad de esa plataforma. Estudio Tavis no
+        controla el funcionamiento ni las prácticas de privacidad de
+        servicios externos.
+      </p>
+    </section>
+
+    <section>
+      <h3>Uso y comercialización de datos</h3>
+
+      <p>
+        Estudio Tavis no vende, alquila ni comercializa los datos
+        personales recibidos. La información se utiliza únicamente
+        para gestionar consultas y relaciones vinculadas con los
+        servicios ofrecidos.
+      </p>
+    </section>
+
+    <section>
+      <h3>Conservación</h3>
+
+      <p>
+        Los mensajes y datos recibidos se conservarán solamente
+        durante el tiempo necesario para responder la consulta,
+        preparar una propuesta, mantener la relación comercial o
+        cumplir obligaciones legales.
+      </p>
+    </section>
+
+    <section>
+      <h3>Derechos sobre tus datos</h3>
+
+      <p>
+        Podés solicitar el acceso, actualización, rectificación o
+        eliminación de los datos compartidos con Estudio Tavis
+        mediante los canales de contacto publicados en esta web.
+      </p>
+    </section>
+  </>
+)}
 
               {openDocument === 'terms' && (
-                <>
-                  <span className="legal-modal__eyebrow">
-                    Información legal
-                  </span>
+  <>
+    <span className="legal-modal__eyebrow">
+      Información legal
+    </span>
 
-                  <h2 id="legal-modal-title">
-                    Términos de uso
-                  </h2>
+    <h2 id="legal-modal-title">
+      Términos de uso
+    </h2>
 
-                  <p className="legal-modal__updated">
-                    Última actualización: 5 de agosto de 2026
-                  </p>
+    <p className="legal-modal__updated">
+      Última actualización: 6 de agosto de 2026
+    </p>
 
-                  <section>
-                    <h3>Finalidad del sitio</h3>
+    <section>
+      <h3>Finalidad del sitio</h3>
 
-                    <p>
-                      Este sitio presenta los servicios y proyectos
-                      de Estudio Tavis. Su contenido es informativo y
-                      puede ser actualizado sin previo aviso.
-                    </p>
-                  </section>
+      <p>
+        Este sitio presenta los servicios, proyectos y formas de
+        contacto de Estudio Tavis. Su contenido es informativo y
+        puede ser actualizado sin previo aviso.
+      </p>
+    </section>
 
-                  <section>
-                    <h3>Consultas y presupuestos</h3>
+    <section>
+      <h3>Formulario de consulta</h3>
 
-                    <p>
-                      El envío de una consulta no constituye una
-                      contratación. Los precios, plazos, entregables
-                      y condiciones de cada proyecto serán
-                      establecidos mediante una propuesta particular
-                      aceptada por ambas partes.
-                    </p>
-                  </section>
+      <p>
+        El formulario organiza la información proporcionada por el
+        usuario y prepara un mensaje para enviarlo mediante
+        WhatsApp. Completar el formulario no envía automáticamente
+        la información ni constituye una contratación.
+      </p>
+    </section>
 
-                  <section>
-                    <h3>Propiedad intelectual</h3>
+    <section>
+      <h3>Exactitud de la información</h3>
 
-                    <p>
-                      El diseño, los textos, la identidad visual y los
-                      elementos propios de esta web pertenecen a
-                      Estudio Tavis, salvo que se indique lo
-                      contrario. Los proyectos exhibidos conservan
-                      los derechos correspondientes de sus
-                      propietarios.
-                    </p>
-                  </section>
+      <p>
+        El usuario es responsable de revisar que la información
+        ingresada sea correcta antes de enviar el mensaje. Estudio
+        Tavis no se responsabiliza por errores o datos incompletos
+        proporcionados durante la consulta.
+      </p>
+    </section>
 
-                  <section>
-                    <h3>Enlaces externos</h3>
+    <section>
+      <h3>Consultas y presupuestos</h3>
 
-                    <p>
-                      La web puede contener enlaces a sitios y
-                      plataformas de terceros. Estudio Tavis no
-                      controla su disponibilidad, seguridad ni
-                      políticas.
-                    </p>
-                  </section>
+      <p>
+        El envío de una consulta no implica la aceptación de un
+        trabajo ni genera una obligación de contratación. Los
+        precios, plazos, entregables y condiciones se establecerán
+        mediante una propuesta particular aceptada por ambas partes.
+      </p>
+    </section>
 
-                  <section>
-                    <h3>Contratación de servicios</h3>
+    <section>
+      <h3>Contratación de servicios</h3>
 
-                    <p>
-                      Cada trabajo se regirá por su presupuesto o
-                      contrato, donde se definirán alcance, pagos,
-                      revisiones, plazos, mantenimiento, dominio,
-                      hosting y propiedad del trabajo entregado.
-                    </p>
-                  </section>
+      <p>
+        Cada proyecto se regirá por su presupuesto o acuerdo, donde
+        podrán definirse alcance, pagos, revisiones, plazos,
+        mantenimiento, dominio, hosting y propiedad del trabajo
+        entregado.
+      </p>
+    </section>
 
-                  <section>
-                    <h3>Legislación aplicable</h3>
+    <section>
+      <h3>Propiedad intelectual</h3>
 
-                    <p>
-                      Estos términos se interpretan conforme a la
-                      legislación vigente de la República Argentina,
-                      respetando los derechos irrenunciables de
-                      consumidores y usuarios.
-                    </p>
-                  </section>
-                </>
-              )}
+      <p>
+        El diseño, los textos, la identidad visual y los elementos
+        propios de esta web pertenecen a Estudio Tavis, salvo que se
+        indique lo contrario. Los proyectos exhibidos conservan los
+        derechos correspondientes de sus propietarios.
+      </p>
+    </section>
 
+    <section>
+      <h3>Enlaces y servicios externos</h3>
+
+      <p>
+        La web puede contener enlaces a WhatsApp y otras plataformas
+        de terceros. Estudio Tavis no controla su disponibilidad,
+        funcionamiento, seguridad ni políticas.
+      </p>
+    </section>
+
+    <section>
+      <h3>Legislación aplicable</h3>
+
+      <p>
+        Estos términos se interpretan conforme a la legislación
+        vigente de la República Argentina, respetando los derechos
+        irrenunciables de consumidores y usuarios.
+      </p>
+    </section>
+  </>
+)}
               {openDocument === 'cookies' && (
-                <>
-                  <span className="legal-modal__eyebrow">
-                    Información legal
-                  </span>
+  <>
+    <span className="legal-modal__eyebrow">
+      Información legal
+    </span>
 
-                  <h2 id="legal-modal-title">
-                    Política de cookies
-                  </h2>
+    <h2 id="legal-modal-title">
+      Política de cookies
+    </h2>
 
-                  <p className="legal-modal__updated">
-                    Última actualización: 5 de agosto de 2026
-                  </p>
+    <p className="legal-modal__updated">
+      Última actualización: 6 de agosto de 2026
+    </p>
 
-                  <section>
-                    <h3>Uso actual</h3>
+    <section>
+      <h3>Uso actual</h3>
 
-                    <p>
-                      Actualmente, esta web no utiliza cookies
-                      publicitarias ni herramientas de seguimiento.
-                    </p>
-                  </section>
+      <p>
+        Actualmente, esta web no utiliza cookies publicitarias ni
+        herramientas de seguimiento o analítica.
+      </p>
+    </section>
 
-                  <section>
-                    <h3>Preferencia de tema</h3>
+    <section>
+      <h3>Preferencia de tema</h3>
 
-                    <p>
-                      La elección entre modo claro y oscuro se guarda
-                      localmente en tu navegador mediante
-                      localStorage. Este almacenamiento no es una
-                      cookie, no permite identificarte y se utiliza
-                      únicamente para recordar tu preferencia visual.
-                    </p>
-                  </section>
+      <p>
+        La elección entre modo claro y oscuro se guarda localmente
+        en tu navegador mediante localStorage. Este almacenamiento
+        no es una cookie, no permite identificarte y se utiliza
+        únicamente para recordar tu preferencia visual.
+      </p>
+    </section>
 
-                  <section>
-                    <h3>Servicios externos</h3>
+    <section>
+      <h3>Formulario de consulta</h3>
 
-                    <p>
-                      Al ingresar en enlaces externos, como WhatsApp,
-                      esos servicios pueden utilizar sus propias
-                      cookies y tecnologías de almacenamiento
-                      conforme a sus políticas.
-                    </p>
-                  </section>
+      <p>
+        El formulario no utiliza cookies ni almacena sus respuestas
+        en el navegador. La información se usa solamente para
+        preparar el mensaje de WhatsApp que el usuario puede decidir
+        enviar.
+      </p>
+    </section>
 
-                  <section>
-                    <h3>Cambios futuros</h3>
+    <section>
+      <h3>Servicios externos</h3>
 
-                    <p>
-                      Si en el futuro se incorporan herramientas de
-                      analítica, publicidad o medición, esta política
-                      será actualizada y se solicitará el
-                      consentimiento correspondiente cuando sea
-                      necesario.
-                    </p>
-                  </section>
+      <p>
+        Al ingresar en servicios externos, como WhatsApp, esas
+        plataformas pueden utilizar sus propias cookies y
+        tecnologías de almacenamiento conforme a sus respectivas
+        políticas.
+      </p>
+    </section>
 
-                  <section>
-                    <h3>Control del almacenamiento</h3>
+    <section>
+      <h3>Cambios futuros</h3>
 
-                    <p>
-                      Podés eliminar la preferencia guardada desde la
-                      configuración de almacenamiento o datos del
-                      sitio de tu navegador.
-                    </p>
-                  </section>
-                </>
-              )}
+      <p>
+        Si en el futuro se incorporan herramientas de analítica,
+        publicidad o medición, esta política será actualizada y se
+        solicitará el consentimiento correspondiente cuando resulte
+        necesario.
+      </p>
+    </section>
+
+    <section>
+      <h3>Control del almacenamiento</h3>
+
+      <p>
+        Podés eliminar la preferencia de tema guardada desde la
+        configuración de almacenamiento o datos del sitio de tu
+        navegador.
+      </p>
+    </section>
+  </>
+)}
             </div>
           </article>
         </div>
