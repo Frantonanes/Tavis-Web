@@ -361,119 +361,222 @@ html[data-theme='dark'] {
 }
 
 /* =========================
-   OPCIONES
+   FORMULARIO
 ========================= */
 
-.contact-section__options {
-  display: grid;
-  align-content: stretch;
-  gap: 1rem;
-}
-
-/* =========================
-   TARJETA DE CONTACTO
-========================= */
-
-.contact-section__card {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 1.2rem;
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
 
   min-width: 0;
-  min-height: 150px;
-  padding: 1.4rem;
+  padding: clamp(1.4rem, 3vw, 2rem);
 
   color: var(--contact-title);
   background: var(--contact-card-bg);
   border: 1px solid var(--contact-card-border);
-  border-radius: 1.3rem;
-
+  border-radius: 1.5rem;
   box-shadow: var(--contact-card-shadow);
-  text-decoration: none;
-
-  transition:
-    transform 0.25s ease,
-    border-color 0.25s ease,
-    box-shadow 0.25s ease;
 }
 
-.contact-section__card:hover {
-  border-color: var(--contact-card-hover-border);
-  box-shadow: var(--contact-card-hover-shadow);
-  transform: translateX(5px);
-}
+.contact-form__heading > span {
+  display: inline-block;
 
-.contact-section__card:focus-visible {
-  outline: 3px solid var(--contact-accent);
-  outline-offset: 5px;
-}
-
-.contact-section__number {
-  display: grid;
-  place-items: center;
-
-  width: 2.8rem;
-  height: 2.8rem;
+  margin-bottom: 0.55rem;
 
   color: var(--contact-accent);
-  background: var(--contact-number-bg);
-  border: 1px solid var(--contact-number-border);
-  border-radius: 0.8rem;
 
-  font-size: 0.84rem;
+  font-size: 0.78rem;
   font-weight: 900;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
-.contact-section__card-content h3 {
-  margin: 0 0 0.55rem;
+.contact-form__heading h3 {
+  margin: 0 0 0.6rem;
 
   color: var(--contact-title);
 
-  font-size: 1.45rem;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
   font-weight: 900;
-  line-height: 1.2;
-  letter-spacing: -0.035em;
+  line-height: 1.1;
+  letter-spacing: -0.045em;
 }
 
-.contact-section__card-content p {
+.contact-form__heading p {
   margin: 0;
 
   color: var(--contact-text);
 
-  font-size: 1.15rem;
-  font-weight: 500;
+  font-size: 0.95rem;
   line-height: 1.6;
 }
 
-.contact-section__arrow {
-  display: grid;
-  place-items: center;
+.contact-form__section {
+  min-width: 0;
+  margin: 0;
+  padding: 1.25rem;
 
-  width: 2.7rem;
-  height: 2.7rem;
+  border: 1px solid var(--contact-card-border);
+  border-radius: 1.1rem;
+}
 
-  color: var(--contact-accent);
-  background: var(--contact-number-bg);
-  border: 1px solid var(--contact-number-border);
-  border-radius: 50%;
+.contact-form__section legend {
+  padding: 0 0.6rem;
 
-  font-size: 1.16rem;
+  color: var(--contact-title);
+
+  font-size: 1rem;
   font-weight: 900;
+}
+
+.contact-form__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.contact-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  min-width: 0;
+}
+
+.contact-form__field--full {
+  grid-column: 1 / -1;
+}
+
+.contact-form__field label {
+  color: var(--contact-title);
+
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.contact-form__field input,
+.contact-form__field select,
+.contact-form__field textarea {
+  width: 100%;
+  min-width: 0;
+  min-height: 3rem;
+  padding: 0.8rem 0.9rem;
+
+  color: var(--contact-title);
+  background: var(--contact-note-bg);
+
+  border: 1px solid var(--contact-card-border);
+  border-radius: 0.8rem;
+
+  font-size: 0.95rem;
+  line-height: 1.5;
 
   transition:
-    color 0.2s ease,
-    background 0.2s ease,
-    transform 0.2s ease;
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
 }
 
-.contact-section__card:hover .contact-section__arrow {
+.contact-form__field textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+.contact-form__field input:hover,
+.contact-form__field select:hover,
+.contact-form__field textarea:hover {
+  border-color: var(--contact-card-hover-border);
+}
+
+.contact-form__field input:focus,
+.contact-form__field select:focus,
+.contact-form__field textarea:focus {
+  outline: none;
+
+  border-color: var(--contact-accent);
+  box-shadow: 0 0 0 3px var(--contact-eyebrow-bg);
+}
+
+.contact-form__consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+
+  color: var(--contact-text);
+
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.5;
+
+  cursor: pointer;
+}
+
+.contact-form__consent input {
+  flex-shrink: 0;
+
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-top: 0.15rem;
+
+  accent-color: var(--contact-accent);
+}
+
+.contact-form__submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+
+  width: 100%;
+  min-height: 3.3rem;
+  padding: 0.8rem 1.2rem;
+
   color: var(--contact-guide-title);
-  background: var(--contact-accent);
-  transform: translateX(3px);
+  background: var(--contact-guide-bg);
+
+  border: 1px solid var(--contact-guide-border);
+  border-radius: 999px;
+
+  font-size: 1rem;
+  font-weight: 900;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
+.contact-form__submit:hover {
+  border-color: var(--contact-accent);
+  box-shadow: var(--contact-card-hover-shadow);
+  transform: translateY(-2px);
+}
+
+.contact-form__submit span {
+  transition: transform 0.2s ease;
+}
+
+.contact-form__submit:hover span {
+  transform: translateX(4px);
+}
+
+.contact-form__submit:focus-visible {
+  outline: 3px solid var(--contact-accent);
+  outline-offset: 4px;
+}
+
+.contact-form__privacy-note {
+  margin: -0.6rem 0 0;
+
+  color: var(--contact-text);
+
+  font-size: 0.78rem;
+  line-height: 1.5;
+  text-align: center;
+}
 /* =========================
    GARANTÍAS
 ========================= */
@@ -582,29 +685,30 @@ html[data-theme='dark'] {
   .contact-section__guide h3 {
     font-size: 1.8rem;
   }
+.contact-form {
+  gap: 1.3rem;
+  padding: 1.1rem;
 
-  .contact-section__card {
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: 0.9rem;
+  border-radius: 1.2rem;
+}
 
-    min-height: 140px;
-    padding: 1.1rem;
+.contact-form__section {
+  padding: 1rem 0.85rem;
+}
 
-    border-radius: 1.1rem;
-  }
+.contact-form__grid {
+  grid-template-columns: 1fr;
+}
 
-  .contact-section__arrow {
-    display: none;
-  }
+.contact-form__field--full {
+  grid-column: auto;
+}
 
-  .contact-section__card-content h3 {
-    font-size: 1.1rem;
-  }
-
-  .contact-section__card-content p {
-    font-size: 0.84rem;
-  }
-
+.contact-form__field input,
+.contact-form__field select,
+.contact-form__field textarea {
+  font-size: 1rem;
+}
   .contact-section__trust {
     align-items: flex-start;
     flex-direction: column;
