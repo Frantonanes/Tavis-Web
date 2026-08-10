@@ -114,6 +114,21 @@ export default function Footer() {
             <span className="site-footer__location">
               Buenos Aires, Argentina
             </span>
+
+            <a
+              className="site-footer__instagram"
+              href="https://www.instagram.com/estudio.tavis/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Seguir a Estudio Tavis en Instagram"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" />
+              </svg>
+              <span>@estudio.tavis</span>
+            </a>
           </div>
 
           <nav

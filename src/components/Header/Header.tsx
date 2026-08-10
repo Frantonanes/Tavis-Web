@@ -68,6 +68,21 @@ export default function Header({
         </nav>
 
         <div className="header-actions">
+          <a
+            className="instagram-link"
+            href="https://www.instagram.com/estudio.tavis/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visitar el Instagram de Estudio Tavis"
+            title="Instagram @estudio.tavis"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="1" className="instagram-link__dot" />
+            </svg>
+          </a>
+
           <button
             className="theme-toggle"
             type="button"

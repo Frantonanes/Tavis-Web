@@ -228,6 +228,7 @@ html[data-theme='dark'] .brand__logo {
    CONTROLES
 ========================= */
 
+.instagram-link,
 .theme-toggle,
 .menu-toggle {
   appearance: none;
@@ -256,11 +257,13 @@ html[data-theme='dark'] .brand__logo {
     box-shadow 0.2s ease;
 }
 
+.instagram-link,
 .theme-toggle {
   display: grid;
   place-items: center;
 }
 
+.instagram-link svg,
 .theme-toggle svg {
   width: 1.15rem;
   height: 1.15rem;
@@ -272,6 +275,12 @@ html[data-theme='dark'] .brand__logo {
   stroke-linejoin: round;
 }
 
+.instagram-link .instagram-link__dot {
+  fill: currentColor;
+  stroke: none;
+}
+
+.instagram-link:hover,
 .theme-toggle:hover,
 .menu-toggle:hover {
   color: var(--header-accent);
@@ -356,6 +365,7 @@ html[data-theme='dark'] .brand__logo {
 }
 
 .header-cta:active,
+.instagram-link:active,
 .theme-toggle:active,
 .menu-toggle:active {
   transform: translateY(0);
@@ -467,6 +477,7 @@ html[data-theme='dark'] .brand__logo {
     font-size: 0.9rem;
   }
 
+  .instagram-link,
   .theme-toggle,
   .menu-toggle {
     width: 2.5rem;
@@ -500,6 +511,7 @@ html[data-theme='dark'] .brand__logo {
     display: none;
   }
 
+  .instagram-link,
   .theme-toggle,
   .menu-toggle {
     width: 2.4rem;
