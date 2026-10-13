@@ -1,63 +1,89 @@
+
 import jazzMusicLogo from '../assets/projects/Logo_jazz_music_oscuro.png'
 import futbolAnaliticoLogo from '../assets/projects/FutbolAnaliticoLogo.png'
 import byChandanaLogo from '../assets/projects/Bychandana_isologo.jpeg'
 
 export const whatsappNumber = '5491156152870'
 
+export function getWhatsappLink(message: string) {
+  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`
+}
+
 export const webStyles = [
   {
-    category: 'Venta online',
-    title: 'E-commerce',
-    text:
-      'Una tienda online completa para mostrar tus productos, recibir pedidos y vender directamente desde tu web.',
+    category: 'Vendé por internet',
+    title: 'Tiendas online',
+    text: 'Tu propia tienda para mostrar productos, recibir pedidos y administrar tus ventas.',
     features: [
       'Diseño adaptado a tu marca',
-      'Catálogo de productos',
+      'Catálogo con categorías y filtros',
       'Carrito de compras',
       'Integración con medios de pago',
-      'Panel para gestionar productos',
-      'Diseño adaptable a celulares'
-    ],
-    message:
-      'Hola, quiero consultar por el desarrollo de una tienda e-commerce.'
-  },
-  {
-    category: 'Presentación de productos',
-    title: 'Catálogo digital',
-    text:
-      'Una web organizada para presentar tus productos y facilitar que los clientes consulten mediante WhatsApp.',
-    features: [
-      'Categorías y filtros',
-      'Ficha individual de cada producto',
-      'Galería de imágenes',
-      'Consultas por WhatsApp',
       'Panel para administrar productos',
       'Diseño adaptable a celulares'
     ],
-    message:
-      'Hola, quiero consultar por el desarrollo de un catálogo digital.'
+    message: 'Hola, quiero consultar por el desarrollo de una tienda online.'
   },
   {
-    category: 'Negocios y profesionales',
-    title: 'Web de servicios',
-    text:
-      'Una página profesional para explicar lo que hacés, generar confianza y transformar visitas en consultas.',
+    category: 'Mostrá tus productos',
+    title: 'Catálogos digitales',
+    text: 'Organizá tus productos en un solo lugar y facilitá las consultas por WhatsApp.',
+    features: [
+      'Categorías y filtros de productos',
+      'Fichas individuales de productos',
+      'Galerías de imágenes',
+      'Consultas directas por WhatsApp',
+      'Panel para administrar productos',
+      'Diseño adaptable a celulares'
+    ],
+    message: 'Hola, quiero consultar por el desarrollo de un catálogo digital.'
+  },
+  {
+    category: 'Presentá tu empresa',
+    title: 'Webs institucionales',
+    text: 'Mostrá quiénes son, qué hacen y cómo pueden contactarlos.',
+    features: [
+      'Presentación de la empresa',
+      'Historia y valores de la marca',
+      'Productos o áreas de actividad',
+      'Información y medios de contacto',
+      'Enlaces a redes sociales',
+      'Optimización básica para buscadores'
+    ],
+    message: 'Hola, quiero consultar por el desarrollo de una web institucional.'
+  },
+  {
+    category: 'Generá consultas',
+    title: 'Webs de servicios',
+    text: 'Presentá tus servicios de manera profesional y ayudá a tus clientes a encontrarte.',
     features: [
       'Presentación del negocio',
-      'Sección de servicios',
-      'Trabajos o casos realizados',
-      'Testimonios de clientes',
+      'Páginas o secciones de servicios',
+      'Galería de trabajos realizados',
+      'Preguntas frecuentes',
       'Contacto directo por WhatsApp',
       'Optimización básica para buscadores'
     ],
-    message:
-      'Hola, quiero consultar por el desarrollo de una web de servicios.'
+    message: 'Hola, quiero consultar por el desarrollo de una web de servicios.'
   },
   {
-    category: 'Marca personal',
-    title: 'Web personal',
-    text:
-      'Un espacio propio para presentar quién sos, mostrar tu experiencia y reunir tus trabajos en un mismo lugar.',
+    category: 'Una propuesta concreta',
+    title: 'Landing pages',
+    text: 'Una página enfocada en presentar una oferta, producto o servicio y motivar una acción.',
+    features: [
+      'Mensaje principal claro y atractivo',
+      'Presentación de beneficios',
+      'Secciones enfocadas en una oferta',
+      'Botones de contacto destacados',
+      'Formulario de consulta opcional',
+      'Diseño adaptable a celulares'
+    ],
+    message: 'Hola, quiero consultar por el desarrollo de una landing page.'
+  },
+  {
+    category: 'Mostrá tu trabajo',
+    title: 'Webs personales y portfolios',
+    text: 'Presentá tu experiencia, tus proyectos y tu identidad profesional en un solo lugar.',
     features: [
       'Presentación personal',
       'Portfolio de proyectos',
@@ -66,16 +92,15 @@ export const webStyles = [
       'Formulario o medios de contacto',
       'Diseño adaptado a tu identidad'
     ],
-    message:
-      'Hola, quiero consultar por el desarrollo de una web personal.'
+    message: 'Hola, quiero consultar por el desarrollo de una web personal o portfolio.'
   }
 ]
 
+// Se conservan los datos de proyectos y contacto sin cambios en esta etapa.
 export const projects = [
   {
     name: 'Jazz Music',
-    description:
-      'Catálogo web para una tienda de instrumentos, con productos, ofertas y contacto directo por WhatsApp.',
+    description: 'Catálogo web para una tienda de instrumentos, con productos, ofertas y contacto directo por WhatsApp.',
     url: 'https://jazzmusicavellaneda.com',
     logo: jazzMusicLogo,
     background: '#111111',
@@ -83,8 +108,7 @@ export const projects = [
   },
   {
     name: 'Fútbol Analítico',
-    description:
-      'Portal deportivo con noticias, predicciones, buscador y panel de administración.',
+    description: 'Portal deportivo con noticias, predicciones, buscador y panel de administración.',
     url: 'https://futbolanalitico.com',
     logo: futbolAnaliticoLogo,
     background: '#071827',
@@ -92,8 +116,7 @@ export const projects = [
   },
   {
     name: 'ByChandana',
-    description:
-      'Web institucional para una marca con dominio propio y presencia profesional.',
+    description: 'Web institucional para una marca con dominio propio y presencia profesional.',
     url: 'https://bychandana.com',
     logo: byChandanaLogo,
     background: '#f4ece4',
@@ -104,30 +127,17 @@ export const projects = [
 export const contactOptions = [
   {
     title: 'Consultar por WhatsApp',
-    text:
-      'La forma más rápida de contarme tu idea y descubrir qué tipo de web necesitás.',
-    href: getWhatsappLink(
-      'Hola, quiero consultar por una página web para mi negocio.'
-    )
+    text: 'La forma más rápida de contarme tu idea y descubrir qué tipo de web necesitás.',
+    href: getWhatsappLink('Hola, quiero consultar por una página web para mi negocio.')
   },
   {
     title: 'Pedir presupuesto',
-    text:
-      'Si ya tenés una idea más clara, podemos revisar el alcance, las secciones y los tiempos.',
-    href: getWhatsappLink(
-      'Hola, quiero pedir un presupuesto para una página web.'
-    )
+    text: 'Si ya tenés una idea más clara, podemos revisar el alcance, las secciones y los tiempos.',
+    href: getWhatsappLink('Hola, quiero pedir un presupuesto para una página web.')
   },
   {
     title: 'Enviar referencias',
-    text:
-      'Podés enviarme webs que te gusten, colores, logos o ejemplos visuales.',
-    href: getWhatsappLink(
-      'Hola, quiero enviarte algunas referencias para mi página web.'
-    )
+    text: 'Podés enviarme webs que te gusten, colores, logos o ejemplos visuales.',
+    href: getWhatsappLink('Hola, quiero enviarte algunas referencias para mi página web.')
   }
 ]
-
-export function getWhatsappLink(message: string) {
-  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`
-}
