@@ -3,21 +3,17 @@ import { getWhatsappLink, webStyles } from '../../../data/siteData'
 
 export default function WebStylesSection() {
   return (
-    <section
-  className="web-styles"
-  id="estilos"
-  aria-labelledby="web-styles-title"
->
+    <section className="web-styles" id="estilos">
       <div className="web-styles__heading">
         <p className="web-styles__eyebrow">
           <span aria-hidden="true" />
           Opciones para tu negocio
         </p>
 
-        <h2 id="web-styles-title">
-  Hay una web pensada para{' '}
-  <span>lo que necesitás.</span>
-</h2>
+        <h2>
+          Hay una web pensada para{' '}
+          <span>lo que necesitás.</span>
+        </h2>
 
         <p>
           Descubrí qué tipo de página puede ayudarte a mostrar tu negocio,
@@ -51,15 +47,15 @@ export default function WebStylesSection() {
             </ul>
 
             <a
-  className="web-style-card__link"
-  href={getWhatsappLink(style.message)}
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label={`Consultar por ${style.title} mediante WhatsApp`}
->
-  Consultar este servicio
-  <span aria-hidden="true">→</span>
-</a>
+              className="web-style-card__link"
+              href={getWhatsappLink(style.message)}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Consultar por ${style.category} mediante WhatsApp`}
+            >
+              Consultar
+              <span aria-hidden="true">→</span>
+            </a>
           </article>
         ))}
       </div>

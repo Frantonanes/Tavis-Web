@@ -11,84 +11,44 @@ import './styles.css'
 
 const THEME_STORAGE_KEY = 'tavis-theme'
 
-type ThemeState = {
-  theme: Theme
-  showSelection: boolean
-}
-
-function getInitialThemeState(): ThemeState {
-  const savedTheme = localStorage.getItem(THEME_STORAGE_KEY)
-
-  if (savedTheme === 'light' || savedTheme === 'dark') {
-    return {
-      theme: savedTheme,
-      showSelection: false
-    }
-  }
-
-  return {
-    theme: 'light',
-    showSelection: true
-  }
-}
-
 function App() {
-  const [themeState, setThemeState] =
-    useState<ThemeState>(getInitialThemeState)
+  const [theme, setTheme] = useState<Theme | null>(() => {
+    const savedTheme = localStorage.getItem(THEME_STORAGE_KEY)
 
-  const { theme, showSelection } = themeState
+    if (savedTheme === 'light' || savedTheme === 'dark') {
+      return savedTheme
+    }
+
+    return null
+  })
 
   useEffect(() => {
-    document.documentElement.dataset.theme = theme
+    document.documentElement.dataset.theme = theme ?? 'light'
   }, [theme])
-
-  useEffect(() => {
-    if (!showSelection) {
-      return
-    }
-
-    const previousOverflow = document.body.style.overflow
-    document.body.style.overflow = 'hidden'
-
-    return () => {
-      document.body.style.overflow = previousOverflow
-    }
-  }, [showSelection])
 
   function changeTheme(newTheme: Theme) {
     localStorage.setItem(THEME_STORAGE_KEY, newTheme)
-
-    setThemeState({
-      theme: newTheme,
-      showSelection: false
-    })
+    setTheme(newTheme)
   }
 
   function toggleTheme() {
-    const newTheme = theme === 'dark' ? 'light' : 'dark'
+    changeTheme(theme === 'dark' ? 'light' : 'dark')
+  }
 
-    localStorage.setItem(THEME_STORAGE_KEY, newTheme)
-
-    setThemeState({
-      theme: newTheme,
-      showSelection: false
-    })
+  if (!theme) {
+    return <ThemeSelection onSelect={changeTheme} />
   }
 
   return (
     <>
       <Header
-  theme={theme}
-  onToggleTheme={toggleTheme}
-/>
+        theme={theme}
+        onToggleTheme={toggleTheme}
+      />
 
-<Home />
+      <Home />
 
-<Footer />
-
-      {showSelection && (
-        <ThemeSelection onSelect={changeTheme} />
-      )}
+      <Footer />
     </>
   )
 }

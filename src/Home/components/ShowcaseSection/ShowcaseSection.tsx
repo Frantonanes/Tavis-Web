@@ -5,11 +5,7 @@ import { projects } from '../../../data/siteData'
 
 export default function ShowcaseSection() {
   return (
-    <section
-  className="showcase-section"
-  id="trabajos"
-  aria-labelledby="showcase-title"
->
+    <section className="showcase-section" id="trabajos">
       <div className="showcase-section__heading">
         <div>
           <p className="showcase-section__eyebrow">
@@ -17,10 +13,10 @@ export default function ShowcaseSection() {
             Proyectos realizados
           </p>
 
-          <h2 id="showcase-title">
-  Trabajos que reflejan nuestra forma de{' '}
-  <span>diseñar y desarrollar.</span>
-</h2>
+          <h2>
+            Trabajos que reflejan nuestra forma de{' '}
+            <span>diseñar y desarrollar.</span>
+          </h2>
         </div>
 
         <p className="showcase-section__description">
@@ -41,7 +37,7 @@ export default function ShowcaseSection() {
               href={project.url}
               key={project.name}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noreferrer"
               aria-label={`Abrir el sitio web de ${project.name}`}
               style={
                 {
@@ -77,7 +73,7 @@ export default function ShowcaseSection() {
                   <img
                     className="showcase-project__logo"
                     src={project.logo}
-                    alt={`Logo del proyecto web ${project.name}`}
+                    alt={`Isologo de ${project.name}`}
                     loading="lazy"
                   />
 

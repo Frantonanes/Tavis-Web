@@ -3,36 +3,31 @@ import './AboutSection.css'
 const capabilities = [
   'Diseño adaptable a celulares',
   'Catálogos y tiendas online',
-  'Webs de servicios y landing pages',
   'Paneles de administración',
   'Integraciones con WhatsApp',
   'Dominio y publicación',
-  'Mantenimiento y soporte web'
+  'Optimización y soporte'
 ]
 
 export default function AboutSection() {
   return (
-    <section
-  className="about-section"
-  id="sobre-nosotros"
-  aria-labelledby="about-title"
->
+    <section className="about-section" id="sobre-nosotros">
       <div className="about-section__heading">
         <p className="about-section__eyebrow">
-  <span aria-hidden="true" />
-  Sobre Estudio Tavis
-</p>
+          <span aria-hidden="true" />
+          Sobre Tavis
+        </p>
 
-        <h2 id="about-title">
-  Creamos soluciones digitales pensadas para{' '}
-  <span>objetivos reales.</span>
-</h2>
+        <h2>
+          Creamos soluciones digitales pensadas para{' '}
+          <span>objetivos reales.</span>
+        </h2>
 
         <p className="about-section__introduction">
-  Estudio Tavis es un estudio de diseño y desarrollo web que ayuda a negocios,
-  profesionales y emprendimientos a construir una presencia digital clara,
-  funcional y preparada para crecer.
-</p>
+          Tavis es un estudio de desarrollo web que ayuda a negocios,
+          profesionales y emprendimientos a construir una presencia digital
+          clara, funcional y preparada para crecer.
+        </p>
       </div>
 
       <div className="about-section__content">
@@ -62,7 +57,7 @@ export default function AboutSection() {
 
             <div>
               <strong>Franco Toñanes</strong>
-              <small>Desarrollador y creador de Estudio Tavis</small>
+              <small>Desarrollador y creador de Tavis</small>
             </div>
           </div>
         </article>
