@@ -1480,4 +1480,141 @@ html[data-theme='dark'] {
     flex-direction: column;
     align-items: flex-start;
   }
+  
+/* ========================================
+   CORRECCIÓN BOTONES FOOTER
+======================================== */
+
+.site-footer .site-footer__whatsapp,
+.site-footer .site-footer__instagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+
+  width: 100%;
+  min-height: 52px;
+  padding: 0.85rem 1.1rem;
+
+  border-radius: 999px;
+  text-decoration: none;
+
+  font-size: 0.92rem;
+  font-weight: 800;
+  line-height: 1.4;
+  white-space: normal;
+  text-align: center;
+}
+
+.site-footer .site-footer__whatsapp {
+  color: var(--footer-button-color);
+  background: var(--footer-button-bg);
+  border: 1px solid transparent;
+}
+
+.site-footer .site-footer__instagram {
+  margin-top: 0.8rem;
+
+  color: var(--footer-title);
+  background: var(--footer-secondary-bg);
+  border: 1px solid var(--footer-secondary-border);
+}
+
+/* SVG: evitar que otros estilos los agranden */
+
+.site-footer .site-footer__whatsapp svg,
+.site-footer .site-footer__instagram svg {
+  display: block;
+  flex: 0 0 20px;
+
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  max-width: 20px;
+  min-height: 20px;
+  max-height: 20px;
+
+  stroke: currentColor;
+}
+
+/* Flecha */
+
+.site-footer .site-footer__whatsapp > span,
+.site-footer .site-footer__instagram > span {
+  flex-shrink: 0;
+  margin-left: auto;
+
+  font-size: 1.1rem;
+}
+
+/* ========================================
+   CORRECCIÓN ENLACES LEGALES
+======================================== */
+
+.site-footer .site-footer__legal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  gap: 1rem 2rem;
+}
+
+.site-footer .site-footer__legal-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 0.8rem 1.5rem;
+}
+
+.site-footer .site-footer__legal-links button {
+  display: inline-flex;
+  align-items: center;
+
+  width: auto;
+  min-width: 0;
+  padding: 0;
+
+  color: var(--footer-text);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.5;
+  white-space: nowrap;
+
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.site-footer .site-footer__legal-links button:hover {
+  color: var(--footer-accent);
+  background: transparent;
+}
+
+/* ========================================
+   CELULARES
+======================================== */
+
+@media (max-width: 600px) {
+  .site-footer .site-footer__legal {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .site-footer .site-footer__legal-links {
+    gap: 0.85rem 1.2rem;
+  }
+
+  .site-footer .site-footer__whatsapp,
+  .site-footer .site-footer__instagram {
+    font-size: 0.88rem;
+    padding: 0.85rem;
+  }
+}
+
 }
