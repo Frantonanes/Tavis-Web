@@ -1367,120 +1367,6 @@ html[data-theme='dark'] {
   font-size: 1.04rem;
   line-height: 1.75;
 }
-
-/* =========================
-   ANIMACIONES
-========================= */
-
-@keyframes legal-modal-fade {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes legal-modal-open {
-  from {
-    opacity: 0;
-    transform: translateY(18px) scale(0.98);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-/* =========================
-   CELULAR
-========================= */
-
-@media (max-width: 560px) {
-  .site-footer__legal {
-    gap: 0.8rem 1rem;
-  }
-
-  .legal-modal {
-    place-items: end center;
-
-    padding: 0.75rem;
-  }
-
-  .legal-modal__dialog {
-    width: 100%;
-    max-height: 90vh;
-
-    border-radius: 1.25rem;
-  }
-
-  .legal-modal__content {
-    max-height: 90vh;
-    padding: 1.4rem 1.2rem;
-  }
-
-  .legal-modal__content > h2 {
-    margin-right: 2.8rem;
-
-    font-size: 2.20rem;
-  }
-
-  .legal-modal__content section p {
-    font-size: 0.98rem;
-  }
-}
-/* =========================
-   TABLET
-========================= */
-
-@media (max-width: 900px) {
-  .site-footer__main {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .site-footer__contact {
-    grid-column: 1 / -1;
-  }
-}
-
-/* =========================
-   CELULAR
-========================= */
-
-@media (max-width: 600px) {
-  .site-footer {
-    padding: 4rem 0 1.5rem;
-  }
-
-  .site-footer__main {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-
-    padding-bottom: 3rem;
-  }
-
-  .site-footer__contact {
-    grid-column: auto;
-  }
-
-  .site-footer__navigation {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    width: 100%;
-  }
-
-  .site-footer__title {
-    grid-column: 1 / -1;
-  }
-
-  .site-footer__bottom {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
 /* ========================================
    CORRECCIÓN BOTONES FOOTER
 ======================================== */
@@ -1616,5 +1502,117 @@ html[data-theme='dark'] {
     padding: 0.85rem;
   }
 }
+/* =========================
+   ANIMACIONES
+========================= */
+
+@keyframes legal-modal-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes legal-modal-open {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 560px) {
+  .site-footer__legal {
+    gap: 0.8rem 1rem;
+  }
+
+  .legal-modal {
+    place-items: end center;
+
+    padding: 0.75rem;
+  }
+
+  .legal-modal__dialog {
+    width: 100%;
+    max-height: 90vh;
+
+    border-radius: 1.25rem;
+  }
+
+  .legal-modal__content {
+    max-height: 90vh;
+    padding: 1.4rem 1.2rem;
+  }
+
+  .legal-modal__content > h2 {
+    margin-right: 2.8rem;
+
+    font-size: 2.20rem;
+  }
+
+  .legal-modal__content section p {
+    font-size: 0.98rem;
+  }
+}
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .site-footer__main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .site-footer__contact {
+    grid-column: 1 / -1;
+  }
+}
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+  .site-footer {
+    padding: 4rem 0 1.5rem;
+  }
+
+  .site-footer__main {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+
+    padding-bottom: 3rem;
+  }
+
+  .site-footer__contact {
+    grid-column: auto;
+  }
+
+  .site-footer__navigation {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    width: 100%;
+  }
+
+  .site-footer__title {
+    grid-column: 1 / -1;
+  }
+
+  .site-footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
 }
