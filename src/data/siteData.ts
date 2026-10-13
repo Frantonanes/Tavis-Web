@@ -3,6 +3,9 @@ import jazzMusicLogo from '../assets/projects/Logo_jazz_music_oscuro.png'
 import futbolAnaliticoLogo from '../assets/projects/FutbolAnaliticoLogo.png'
 import byChandanaLogo from '../assets/projects/Bychandana_isologo.jpeg'
 
+import byChandanaPreview from '../assets/projects/bychandana-preview.png'
+import jazzMusicPreview from '../assets/projects/jazzmusic-preview.png'
+
 export const whatsappNumber = '5491156152870'
 
 export function getWhatsappLink(message: string) {
@@ -97,32 +100,84 @@ export const webStyles = [
 ]
 
 // Se conservan los datos de proyectos y contacto sin cambios en esta etapa.
+
 export const projects = [
   {
+    name: 'ByChandana',
+    type: 'Tienda online',
+    featured: true,
+
+    description:
+      'Desarrollamos una tienda online para una marca de productos artesanales. Un espacio diseñado para representar su identidad, organizar sus creaciones y facilitar la experiencia de compra.',
+
+    features: [
+      'Catálogo de productos',
+      'Carrito de compras',
+      'Filtros y categorías',
+      'Pedidos por WhatsApp',
+      'Panel de administración',
+      'Diseño responsive'
+    ],
+
+    url: 'https://bychandana.com',
+
+    logo: byChandanaLogo,
+    preview: byChandanaPreview,
+
+    background: '#f4ece4',
+    glow: 'rgba(181, 154, 106, 0.20)'
+  },
+
+  {
     name: 'Jazz Music',
-    description: 'Catálogo web para una tienda de instrumentos, con productos, ofertas y contacto directo por WhatsApp.',
+    type: 'Catálogo digital',
+    featured: true,
+
+    description:
+      'Creamos un catálogo digital para una tienda de instrumentos musicales de Avellaneda. Una web que permite explorar productos, conocer ofertas y realizar consultas de manera directa.',
+
+    features: [
+      'Catálogo de instrumentos',
+      'Categorías de productos',
+      'Buscador y filtros',
+      'Productos en oferta',
+      'Fichas de productos',
+      'Contacto por WhatsApp'
+    ],
+
     url: 'https://jazzmusicavellaneda.com',
+
     logo: jazzMusicLogo,
+    preview: jazzMusicPreview,
+
     background: '#111111',
     glow: 'rgba(181, 154, 106, 0.24)'
   },
+
   {
     name: 'Fútbol Analítico',
-    description: 'Portal deportivo con noticias, predicciones, buscador y panel de administración.',
+    type: 'Portal deportivo',
+    featured: false,
+
+    description:
+      'Portal deportivo con noticias, predicciones, buscador y panel de administración.',
+
+    features: [
+      'Portal de noticias',
+      'Buscador de contenidos',
+      'Panel de administración'
+    ],
+
     url: 'https://futbolanalitico.com',
+
     logo: futbolAnaliticoLogo,
+    preview: futbolAnaliticoLogo,
+
     background: '#071827',
     glow: 'rgba(24, 187, 209, 0.22)'
-  },
-  {
-    name: 'ByChandana',
-    description: 'Web institucional para una marca con dominio propio y presencia profesional.',
-    url: 'https://bychandana.com',
-    logo: byChandanaLogo,
-    background: '#f4ece4',
-    glow: 'rgba(181, 154, 106, 0.2)'
   }
 ]
+
 
 export const contactOptions = [
   {
