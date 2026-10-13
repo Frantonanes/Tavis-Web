@@ -1502,6 +1502,21 @@ html[data-theme='dark'] {
     padding: 0.85rem;
   }
 }
+
+/* WHATSAPP — ESTILO CLARO */
+
+.site-footer .site-footer__whatsapp {
+  color: var(--footer-title);
+  background: var(--footer-secondary-bg);
+  border: 1px solid var(--footer-secondary-border);
+}
+
+.site-footer .site-footer__whatsapp:hover {
+  color: var(--footer-accent);
+  background: var(--footer-secondary-bg);
+  border-color: var(--footer-accent);
+}
+
 /* =========================
    ANIMACIONES
 ========================= */
