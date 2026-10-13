@@ -13,9 +13,9 @@ export default function Home() {
     <main className="home">
       <HeroSection />
       <WebStylesSection />
+      <FaqSection />
       <ShowcaseSection />
       <AboutSection />
-      <FaqSection />
       <ContactSection />
     </main>
   )
