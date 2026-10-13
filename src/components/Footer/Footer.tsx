@@ -220,7 +220,7 @@ export default function Footer() {
             </a>
 
             <span className="site-footer__contact-note">
-              Primera consulta gratuita y sin compromiso.
+              Consultas gratuita y sin compromiso.
             </span>
           </div>
         </div>
