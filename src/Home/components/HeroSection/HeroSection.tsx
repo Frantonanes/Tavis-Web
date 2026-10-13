@@ -1,6 +1,6 @@
 import './HeroSection.css'
-import bychandanaPreview from '../../../assets/projects/bychandana-preview.webp'
-import jazzmusicPreview from '../../../assets/projects/jazzmusic-preview.webp'
+import bychandanaPreview from '../../../assets/projects/bychandana-preview.png'
+import jazzmusicPreview from '../../../assets/projects/jazzmusic-preview.png'
 
 const whatsappNumber = '5491156152870'
 const whatsappMessage = encodeURIComponent(
